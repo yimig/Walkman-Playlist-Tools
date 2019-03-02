@@ -1,0 +1,4 @@
+﻿  pch.cpp
+  ConsoleApplication1.cpp
+  test.c
+c:\users\zhang\source\repos\walkman playlist tools\consoleapplication1\test.c(1): fatal error C1853: “Debug\ConsoleApplication1.pch”预编译头文件来自编译器的早期版本，或者预编译头为 C++ 而在 C 中使用它(或相反)

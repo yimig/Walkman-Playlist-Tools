@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\z8442\source\repos\Walkman List Tools\Walkman List Tools" t="IncludeRecursive">
+      <e p="About.cs" t="Include" />
+      <e p="About.Designer.cs" t="Include" />
+      <e p="About.resx" t="Include" />
+      <e p="App.config" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Data.cs" t="Include" />
+      <e p="Enter.cs" t="Include" />
+      <e p="Enter.Designer.cs" t="Include" />
+      <e p="Enter.resx" t="Include" />
+      <e p="error.txt" t="Include" />
+      <e p="FileControl.cs" t="Include" />
+      <e p="Form1.cs" t="Include" />
+      <e p="Form1.Designer.cs" t="Include" />
+      <e p="Form1.resx" t="Include" />
+      <e p="list_128px_1202777_easyicon.net.ico" t="Include" />
+      <e p="ListControl.cs" t="Include" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+        <e p="Resources.Designer.cs" t="Include" />
+        <e p="Resources.resx" t="Include" />
+        <e p="Settings.Designer.cs" t="Include" />
+        <e p="Settings.settings" t="Include" />
+      </e>
+      <e p="select.cs" t="Include" />
+      <e p="select.Designer.cs" t="Include" />
+      <e p="select.resx" t="Include" />
+      <e p="Setting.cs" t="Include" />
+      <e p="Setting.Designer.cs" t="Include" />
+      <e p="Setting.resx" t="Include" />
+      <e p="SettingsList.Designer.cs" t="Include" />
+      <e p="SettingsList.settings" t="Include" />
+      <e p="Walkman List Tools.csproj" t="IncludeRecursive" />
+    </e>
+    <e p="C:\Users\zhang\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\zhang\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_Walkman Playlist Tools.277942877.00" t="ExcludeRecursive" />
+    <e p="C:\Users\zhang\source\repos\Walkman Playlist Tools" t="IncludeFlat">
+      <e p="DragTest" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DragTest.csproj" t="IncludeRecursive" />
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+      </e>
+      <e p="ListViewDragTest" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ListViewDragTest.csproj" t="IncludeRecursive" />
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Walkman Playlist Tools" t="IncludeRecursive">
+        <e p="AboutWindow.xaml" t="Include" />
+        <e p="AboutWindow.xaml.cs" t="Include" />
+        <e p="App.config" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BuildTab.cs" t="Include" />
+        <e p="DelWindow.xaml" t="Include" />
+        <e p="DelWindow.xaml.cs" t="Include" />
+        <e p="GetMusicInfo.cs" t="Include" />
+        <e p="Icon" t="Include">
+          <e p="aboutwindow.ico" t="Include" />
+          <e p="addnew.ico" t="Include" />
+          <e p="addplaylist.ico" t="Include" />
+          <e p="addplaylistwindow.ico" t="Include" />
+          <e p="addworkplace.ico" t="Include" />
+          <e p="audio.ico" t="Include" />
+          <e p="back.ico" t="Include" />
+          <e p="clearitems.ico" t="Include" />
+          <e p="deleteitems.ico" t="Include" />
+          <e p="deleteplaylist.ico" t="Include" />
+          <e p="finddeviceplaylist.ico" t="Include" />
+          <e p="Inverse.ico" t="Include" />
+          <e p="ischecked.ico" t="Include" />
+          <e p="isnotchecked.ico" t="Include" />
+          <e p="locate.ico" t="Include" />
+          <e p="moveallL.ico" t="Include" />
+          <e p="moveallR.ico" t="Include" />
+          <e p="moveL.ico" t="Include" />
+          <e p="moveR.ico" t="Include" />
+          <e p="next.ico" t="Include" />
+          <e p="pause.ico" t="Include" />
+          <e p="play.ico" t="Include" />
+          <e p="playfore.ico" t="Include" />
+          <e p="playnext.ico" t="Include" />
+          <e p="reflesh.ico" t="Include" />
+          <e p="rename.ico" t="Include" />
+          <e p="saveplaylist.ico" t="Include" />
+          <e p="saveplaylists.ico" t="Include" />
+          <e p="search.ico" t="Include" />
+          <e p="select_to_check.ico" t="Include" />
+          <e p="settingwindow.ico" t="Include" />
+          <e p="skip.ico" t="Include" />
+          <e p="yes.ico" t="Include" />
+        </e>
+        <e p="LoadWindow.xaml" t="Include" />
+        <e p="LoadWindow.xaml.cs" t="Include" />
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="ManagePlaylistWindow.xaml" t="Include" />
+        <e p="ManagePlaylistWindow.xaml.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="PlayWindow.xaml" t="Include" />
+        <e p="PlayWindow.xaml.cs" t="Include" />
+        <e p="profiles" t="Include">
+          <e p="en" t="Include" />
+          <e p="es" t="Include" />
+          <e p="fi" t="Include" />
+          <e p="fr" t="Include" />
+          <e p="it" t="Include" />
+          <e p="ja" t="Include" />
+          <e p="ko" t="Include" />
+          <e p="ru" t="Include" />
+          <e p="th" t="Include" />
+          <e p="zh-cn" t="Include" />
+          <e p="zh-tw" t="Include" />
+        </e>
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="RenameWindow.xaml" t="Include" />
+        <e p="RenameWindow.xaml.cs" t="Include" />
+        <e p="SearchWindow.xaml" t="Include" />
+        <e p="SearchWindow.xaml.cs" t="Include" />
+        <e p="SelectWindow.xaml" t="Include" />
+        <e p="SelectWindow.xaml.cs" t="Include" />
+        <e p="Setting.Designer.cs" t="Include" />
+        <e p="Setting.settings" t="Include" />
+        <e p="SettingWindow.xaml" t="Include" />
+        <e p="SettingWindow.xaml.cs" t="Include" />
+        <e p="Walkman Playlist Tools.csproj" t="IncludeRecursive" />
+        <e p="开发备忘录.txt" t="Include" />
+      </e>
+      <e p="Walkman Playlist Tools.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>

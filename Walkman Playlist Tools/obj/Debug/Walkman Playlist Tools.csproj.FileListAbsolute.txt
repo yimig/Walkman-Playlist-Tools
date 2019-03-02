@@ -1,0 +1,40 @@
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\bin\Debug\Walkman Playlist Tools.exe.config
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\bin\Debug\Walkman Playlist Tools.exe
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\bin\Debug\Walkman Playlist Tools.pdb
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\Walkman Playlist Tools.csprojAssemblyReference.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\MainWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\App.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\Walkman Playlist Tools_MarkupCompile.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\Walkman Playlist Tools_MarkupCompile.lref
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\MainWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\Walkman Playlist Tools.g.resources
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\Walkman_Playlist_Tools.Properties.Resources.resources
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\Walkman Playlist Tools.csproj.GenerateResource.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\Walkman Playlist Tools.csproj.CoreCompileInputs.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\Walkman Playlist Tools.exe
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\Walkman Playlist Tools.pdb
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\bin\Debug\Bass.Net.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\bin\Debug\LanguageDetect.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\bin\Debug\vjslib.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\bin\Debug\Bass.Net.xml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\AboutWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\DelWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\LoadWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\ManagePlaylistWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\PlayWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\RenameWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\SearchWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\SelectWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\SettingWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\AboutWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\DelWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\LoadWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\ManagePlaylistWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\PlayWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\RenameWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\SearchWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\SelectWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\SettingWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\Debug\Walkman Playlist Tools.csproj.CopyComplete
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\bin\Debug\LanguageDetect.pdb

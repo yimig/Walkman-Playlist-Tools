@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfApplication6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ListBox Name="LBoxSort" PreviewMouseMove="LBoxSort_OnPreviewMouseMove" Drop="LBoxSort_OnDrop" AllowDrop="True" SelectionMode="Multiple">
+            <TextBlock Text="1111"/>
+            <TextBlock Text="2222"/>
+            <TextBlock Text="3333"/>
+            <TextBlock Text="4444"/>
+            <TextBlock Text="5555"/>
+        </ListBox>
+    </Grid>
+</Window>

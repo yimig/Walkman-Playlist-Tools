@@ -1,0 +1,197 @@
+﻿<Window x:Class="Walkman_Playlist_Tools.SettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:input="clr-namespace:System.Windows.Input;assembly=PresentationCore"
+        xmlns:local="clr-namespace:Walkman_Playlist_Tools"
+        mc:Ignorable="d"
+       Title="设置" Height="700" Width="500" Icon="Icon/settingwindow.ico" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TabControl Margin="5">
+            <TabItem Header="通用">
+                <ScrollViewer>
+                    <StackPanel>
+                        <GroupBox Header="试听" Margin="10">
+                            <StackPanel>
+                                <CheckBox Content="每次都从歌曲四分之一的位置播放" Margin="10" Name="IsTryQuarter"  Click="IsTryQuarter_OnClick"></CheckBox>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="默认删除音乐列表选项" Margin="10">
+                            <StackPanel>
+                                <RadioButton GroupName="IsDelFile" x:Name="NoDelFile" Content="仅在程序中移除，不删除文件" Margin="2" Click="NoDelFile_OnClick"/>
+                                <RadioButton GroupName="IsDelFile" x:Name="DelFile" Content="从程序中移除且删除文件" Margin="2" Click="DelFile_OnClick"/>
+                                <RadioButton GroupName="IsDelFile" x:Name="AskMe" Content="每次删除时询问我" Margin="2" Click="AskMe_OnClick"/>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="默认存放路径" Margin="10">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="10">
+                                    <TextBlock Text="Walkman连接电脑后，其盘符为："></TextBlock>
+                                    <ComboBox Width="50" Name="WalkmanTag" SelectionChanged="WalkmanTag_OnSelectionChanged">
+                                        <ComboBoxItem Content="D:"/>
+                                        <ComboBoxItem Content="E:"/>
+                                        <ComboBoxItem Content="F:"/>
+                                        <ComboBoxItem Content="G:"/>
+                                        <ComboBoxItem Content="H:"/>
+                                        <ComboBoxItem Content="I:"/>
+                                        <ComboBoxItem Content="J:"/>
+                                        <ComboBoxItem Content="K:"/>
+                                        <ComboBoxItem Content="L:"/>
+                                        <ComboBoxItem Content="M:"/>
+                                        <ComboBoxItem Content="N:"/>
+                                        <ComboBoxItem Content="O:"/>
+                                        <ComboBoxItem Content="P:"/>
+                                        <ComboBoxItem Content="Q:"/>
+                                        <ComboBoxItem Content="R:"/>
+                                        <ComboBoxItem Content="S:"/>
+                                        <ComboBoxItem Content="T:"/>
+                                        <ComboBoxItem Content="U:"/>
+                                        <ComboBoxItem Content="V:"/>
+                                        <ComboBoxItem Content="W:"/>
+                                        <ComboBoxItem Content="X:"/>
+                                        <ComboBoxItem Content="Y:"/>
+                                        <ComboBoxItem Content="Z:"/>
+                                    </ComboBox>
+                                </StackPanel>
+                                <GroupBox Header="内存拓展" >
+                                    <StackPanel>
+                                        <CheckBox Content="使用SD卡" Margin="10" Name="IsUseSD" Click="IsUseSD_OnClick"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="Walkman连接电脑后，其SD卡盘符为：" Margin="10" />
+                                            <ComboBox Width="50" Margin="10" x:Name="SDcardTag" SelectionChanged="SDcardTag_OnSelectionChanged">
+                                                <ComboBoxItem Content="D:"/>
+                                                <ComboBoxItem Content="E:"/>
+                                                <ComboBoxItem Content="F:"/>
+                                                <ComboBoxItem Content="G:"/>
+                                                <ComboBoxItem Content="H:"/>
+                                                <ComboBoxItem Content="I:"/>
+                                                <ComboBoxItem Content="J:"/>
+                                                <ComboBoxItem Content="K:"/>
+                                                <ComboBoxItem Content="L:"/>
+                                                <ComboBoxItem Content="M:"/>
+                                                <ComboBoxItem Content="N:"/>
+                                                <ComboBoxItem Content="O:"/>
+                                                <ComboBoxItem Content="P:"/>
+                                                <ComboBoxItem Content="Q:"/>
+                                                <ComboBoxItem Content="R:"/>
+                                                <ComboBoxItem Content="S:"/>
+                                                <ComboBoxItem Content="T:"/>
+                                                <ComboBoxItem Content="U:"/>
+                                                <ComboBoxItem Content="V:"/>
+                                                <ComboBoxItem Content="W:"/>
+                                                <ComboBoxItem Content="X:"/>
+                                                <ComboBoxItem Content="Y:"/>
+                                                <ComboBoxItem Content="Z:"/>
+                                            </ComboBox>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </GroupBox>
+                                <TextBlock Text="应用默认的缓存存放地址：" Margin="5"></TextBlock>
+                                <TextBox IsReadOnly="True" Margin="5" Name="AchePath"></TextBox>
+                                <Button Content="修改" Width="60" HorizontalAlignment="Left" Margin="10" Name="ChangeAchePath" Click="ChangeAchePath_OnClick"></Button>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="自动分类规则" Margin="10">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="10">
+                                    <TextBlock Text="按文件夹分类时，至少有"></TextBlock>
+                                    <TextBox Width="40" input:InputMethod.IsInputMethodEnabled="False" Name="LeastFolder" TextChanged="LeastFolder_OnTextChanged"></TextBox>
+                                    <TextBlock Text="首歌曲才将其归纳为新播放列表"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="10">
+                                    <TextBlock Text="按导入时间分类时，至少有"></TextBlock>
+                                    <TextBox Width="40" input:InputMethod.IsInputMethodEnabled="False" Name="LeastBuildTime" TextChanged="LeastBuildTime_OnTextChanged"></TextBox>
+                                    <TextBlock Text="首歌曲才将其归纳为新播放列表"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="10">
+                                    <TextBlock Text="按音乐格式分类时，至少有"></TextBlock>
+                                    <TextBox Width="40" InputMethod.IsInputMethodEnabled="False" x:Name="LeastFormat" TextChanged="LeastFormat_OnTextChanged"/>
+                                    <TextBlock Text="首歌曲才将其归纳为新播放列表"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="10,10,10,0">
+                                    <TextBlock Text="按标题语言分类时，至少有"></TextBlock>
+                                    <TextBox Width="40" InputMethod.IsInputMethodEnabled="False" x:Name="LeastCountry" TextChanged="LeastCountry_OnTextChanged"/>
+                                    <TextBlock Text="首歌曲才将其归纳为新播放列表"></TextBlock>
+                                </StackPanel>
+                                <CheckBox Margin="10,5,10,10" Name="ScanLyricBox" Click="ScanLyricBox_OnClick">扫描歌词以增加识别精确度</CheckBox>
+                                <StackPanel Orientation="Horizontal" Margin="10">
+                                    <TextBlock Text="按艺术家分类时，至少有"></TextBlock>
+                                    <TextBox Width="40" input:InputMethod.IsInputMethodEnabled="False" Name="LeastArtist" TextChanged="LeastArtist_OnTextChanged"></TextBox>
+                                    <TextBlock Text="首歌曲才将其归纳为新播放列表"></TextBlock>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="10,10,10,0">
+                                    <TextBlock Text="按年代分类时，至少有"></TextBlock>
+                                    <TextBox Width="40" input:InputMethod.IsInputMethodEnabled="False" Name="LeastAge" TextChanged="LeastAge_OnTextChanged"></TextBox>
+                                    <TextBlock Text="首歌曲才将其归纳为新播放列表"></TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="模式">
+                <StackPanel>
+                    <GroupBox Header="扫描模式" Margin="10">
+                        <StackPanel>
+                            <RadioButton GroupName="ScanMode" Content="仅使用Shell32库获得歌曲信息" Margin="10,10,0,0" Name="UseShellOnly" Click="UseShellOnly_OnClick"></RadioButton>
+                            <TextBlock Text="(占用内存最少，速度慢，且只能获得MP3和Flac格式的音乐信息，适用于仅编辑播放列表的用户）" TextWrapping="Wrap"></TextBlock>
+                            <RadioButton GroupName="ScanMode" Content="混合使用Shell32库与Bass库获得歌曲信息" Margin="10,10,0,0" Name="UseAll" Click="UseAll_OnClick"></RadioButton>
+                            <TextBlock Text="(占用内存中等，速度中等，使用Shell32库获得MP3和Flac格式的音乐信息，其他格式使用Bass库获得信息，但是若其他类型的音乐较多或体积较大——如有很多DSD音乐，同样会造成高内存占用。）" TextWrapping="Wrap"></TextBlock>
+                            <RadioButton GroupName="ScanMode" Content="仅使用Bass库获得歌曲信息" Margin="10,10,0,0" Name="UseBassOnly" Click="UseBassOnly_OnClick"></RadioButton>
+                            <TextBlock Text="(占用内存最多，速度最快，如果音乐不是很多或者内存较为充裕，且上面的方法无法得到正确的MP3和Flac歌曲信息可以尝试一下此选项，其他情况不建议使用）" TextWrapping="Wrap"></TextBlock>
+                            <GroupBox Header="说明" Margin="10">
+                                <TextBlock TextWrapping="Wrap" Text="此设置仅改变扫描事件，初次扫描后若未出现问题则会保存缓存，下次启动时自动载入缓存，所以并不是每次启动都会带来高内存占用。"></TextBlock>
+                            </GroupBox>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="保存">
+                <StackPanel>
+                    <GroupBox Header="保存播放列表" Margin="10">
+                        <StackPanel>
+                            <CheckBox Margin="10" Content="标记SD卡中的播放列表" x:Name="IsDriveName" Click="IsDriveName_OnClick"/>
+                            <TextBlock TextWrapping="Wrap" Text="如：中文.m3u→[SD]中文.m3u，这样可以在Walkman的播放列表栏目中分辨音乐列表所在的位置。"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="复制音乐" Margin="10">
+                        <StackPanel>
+                            <CheckBox Margin="10" Content="复制音乐时，自动建立以今天日期为名的播放列表（按日期分类）" Name="IsDatePlaylist" Click="IsDatePlaylist_OnClick"></CheckBox>
+                            <GroupBox Header="默认复制文件位置" Margin="10">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="10">
+                                        <TextBlock Text="设备：" VerticalAlignment="Center"></TextBlock>
+                                        <ComboBox Width="150" x:Name="CopyFileDrive" SelectionChanged="CopyFileDrive_OnSelectionChanged">
+                                            <ComboBoxItem Content="Walkman"/>
+                                            <ComboBoxItem Content="SD卡"/>
+                                            <ComboBoxItem Content="跟据工作区所选位置而定"/>
+                                        </ComboBox>
+                                    </StackPanel>
+                                    <GroupBox Header="建立文件夹选项">
+                                        <StackPanel>
+                                            <RadioButton GroupName="CopyMode" Content="直接复制入设备的&quot;Music\&quot;目录内，不建立文件夹" Margin="10,10,10,5" Name="NoFolder" Click="NoFolder_OnClick"></RadioButton>
+                                            <RadioButton GroupName="CopyMode" Content="跟据艺术家创建文件夹，共同的艺术家曲目放入同一个文件夹" Margin="10,5,10,5" Name="ArtistFolder" Click="ArtistFolder_OnClick"></RadioButton>
+                                            <RadioButton GroupName="CopyMode" Content="跟据专辑创建文件夹，共同的专辑曲目放入同一个文件夹" Margin="10,5,10,10" Name="AlbumFolder" Click="AlbumFolder_OnClick"></RadioButton>
+                                        </StackPanel>
+                                    </GroupBox>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox Header="默认复制文件夹位置" Margin="10">
+                                <StackPanel Orientation="Horizontal" Margin="10">
+                                    <TextBlock Text="设备：" VerticalAlignment="Center"></TextBlock>
+                                    <ComboBox Width="150" Name="CopyFolderDrive" SelectionChanged="CopyFolderDrive_OnSelectionChanged">
+                                        <ComboBoxItem Content="Walkman"/>
+                                        <ComboBoxItem Content="SD卡"/>
+                                        <ComboBoxItem Content="跟据工作区所选位置而定"/>
+                                    </ComboBox>
+                                </StackPanel>
+                            </GroupBox>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
+

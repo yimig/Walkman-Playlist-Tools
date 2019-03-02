@@ -1,0 +1,5 @@
+C:\Users\zhang\source\repos\Walkman Playlist Tools\爬虫测试2\obj\Debug\爬虫测试2.csprojAssemblyReference.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\爬虫测试2\obj\Debug\MainWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\爬虫测试2\obj\Debug\爬虫测试2_MarkupCompile.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\爬虫测试2\obj\Debug\爬虫测试2_MarkupCompile.lref
+C:\Users\zhang\source\repos\Walkman Playlist Tools\爬虫测试2\obj\Debug\App.g.cs

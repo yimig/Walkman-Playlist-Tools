@@ -1,0 +1,15 @@
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\bin\Debug\ListViewDragTest.exe.config
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\bin\Debug\ListViewDragTest.exe
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\bin\Debug\ListViewDragTest.pdb
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\obj\Debug\MainWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\obj\Debug\App.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\obj\Debug\ListViewDragTest_MarkupCompile.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\obj\Debug\ListViewDragTest_MarkupCompile.lref
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\obj\Debug\MainWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\obj\Debug\ListViewDragTest.g.resources
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\obj\Debug\ListViewDragTest.Properties.Resources.resources
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\obj\Debug\ListViewDragTest.csproj.GenerateResource.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\obj\Debug\ListViewDragTest.csproj.CoreCompileInputs.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\obj\Debug\ListViewDragTest.exe
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\obj\Debug\ListViewDragTest.pdb
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ListViewDragTest\obj\Debug\ListViewDragTest.csprojAssemblyReference.cache

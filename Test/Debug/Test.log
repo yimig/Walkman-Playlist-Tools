@@ -1,0 +1,4 @@
+﻿  pch.cpp
+  Test.cpp
+c:\users\zhang\source\repos\walkman playlist tools\test\test.cpp(7): warning C4326: “main”的返回类型应为“int”而非“void”
+  Test.vcxproj -> C:\Users\zhang\source\repos\Walkman Playlist Tools\Test\Debug\Test.exe

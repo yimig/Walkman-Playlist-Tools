@@ -1,0 +1,15 @@
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\bin\Debug\DragTest2.exe.config
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\bin\Debug\DragTest2.exe
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\bin\Debug\DragTest2.pdb
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\obj\Debug\DragTest2.csprojAssemblyReference.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\obj\Debug\MainWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\obj\Debug\App.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\obj\Debug\DragTest2_MarkupCompile.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\obj\Debug\DragTest2_MarkupCompile.lref
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\obj\Debug\MainWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\obj\Debug\DragTest2.g.resources
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\obj\Debug\DragTest2.Properties.Resources.resources
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\obj\Debug\DragTest2.csproj.GenerateResource.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\obj\Debug\DragTest2.csproj.CoreCompileInputs.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\obj\Debug\DragTest2.exe
+C:\Users\zhang\source\repos\Walkman Playlist Tools\DragTest2\obj\Debug\DragTest2.pdb

@@ -1,0 +1,13 @@
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\b\zhang\source\repos\Walkman Playlist Tools\DragTest\bin\Debug\DragTest.exe.config
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\b\zhang\source\repos\Walkman Playlist Tools\DragTest\bin\Debug\DragTest.exe
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\i\DragTest\Debug\DragTest.csprojAssemblyReference.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\i\DragTest\Debug\MainWindow.baml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\i\DragTest\Debug\MainWindow.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\i\DragTest\Debug\App.g.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\i\DragTest\Debug\DragTest_MarkupCompile.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\i\DragTest\Debug\DragTest.g.resources
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\i\DragTest\Debug\DragTest.Properties.Resources.resources
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\i\DragTest\Debug\DragTest.csproj.GenerateResource.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\i\DragTest\Debug\DragTest.csproj.CoreCompileInputs.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\i\DragTest\Debug\DragTest.csproj.CopyComplete
+C:\Users\zhang\source\repos\Walkman Playlist Tools\.vs\Walkman Playlist Tools\lut\0\i\DragTest\Debug\DragTest.exe

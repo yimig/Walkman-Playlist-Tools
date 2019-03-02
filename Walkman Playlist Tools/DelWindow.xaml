@@ -1,0 +1,26 @@
+﻿<Window x:Class="Walkman_Playlist_Tools.DelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Walkman_Playlist_Tools"
+        mc:Ignorable="d"
+        Title="删除选项" Height="150" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Icon/deleteplaylist.ico" Loaded="DelWindow_OnLoaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <RadioButton Grid.Row="0" Name="DelInProgram" GroupName="DelOpinion" Margin="10,10,10,4" Content="仅从程序中移除，不删除源文件" Click="DelInProgram_OnClick"></RadioButton>
+            <RadioButton Grid.Row="1" Name="DelInFile" GroupName="DelOpinion" Margin="10,0" Content="从程序中删除，且删除源文件" Click="DelInFile_OnClick"></RadioButton>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Name="Conform" Content="确定" Margin="10,5" Click="Conform_OnClick"></Button>
+            <Button Name="Cancel" Content="取消" Margin="10,5" Grid.Column="1" Click="Cancel_OnClick"></Button>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,83 @@
+﻿<Window x:Class="Walkman_Playlist_Tools.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Walkman_Playlist_Tools"
+        mc:Ignorable="d"
+        Title="关于" Height="600" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Icon/aboutwindow.ico">
+    <Grid>
+        <TabControl Margin="10" Name="AboutControl">
+            <TabItem Header="关于">
+                <StackPanel Margin="10">
+                    <GroupBox Header="版本信息">
+                        <StackPanel>
+                            <TextBlock FontWeight="Bold" FontSize="15" VerticalAlignment="Center" Margin="5" HorizontalAlignment="Center">Ver 1.0.1.0</TextBlock>
+                            <TextBlock>Build 2019/2/6</TextBlock>
+                            <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+                                <Button Name="CheckUpdateButton" Width="100" Height="25" Margin="5" Click="CheckUpdateButton_OnClick">检查新版本</Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Apache License" Margin="0,10,0,0">
+                        <TextBlock TextWrapping="Wrap" Margin="5">
+                            Copyright [2019] [upane.net]
+
+                            Licensed under the Apache License, Version 2.0 (the "License");
+                            you may not use this file except in compliance with the License.
+                            You may obtain a copy of the License at
+
+                            http://www.apache.org/licenses/LICENSE-2.0
+
+                            Unless required by applicable law or agreed to in writing, software
+                            distributed under the License is distributed on an "AS IS" BASIS,
+                            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                            See the License for the specific language governing permissions and
+                            limitations under the License.
+                        </TextBlock>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Q&amp;A">
+                <ScrollViewer>
+                    <StackPanel Margin="10,10,0,10">
+                        <TextBlock FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Margin="0,5">Q：既然Music Center/批处理脚本能够制作播放列表，那还用这个软件做什么？</TextBlock>
+                        <TextBlock TextWrapping="Wrap">A：Music Center每次导入播放列表都需要导入音乐文件，如果多个播放列表中有相同的曲目该曲目则会反复导入，不仅损害机器闪存的寿命还造成时间上的浪费。比起使用批处理脚本，本软件能提供用户友好的界面和更加强大的管理功能。</TextBlock>
+                        <TextBlock FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Margin="0,5">Q：读取音乐信息有什么用？这个不是只能做播放列表吗？</TextBlock>
+                        <TextBlock TextWrapping="Wrap">A：读取音乐信息后可以使用自动归类的功能，另外也方便用户选择音乐。虽然目前看起来用处并不大，但是将来希望能够集成补充音乐信息的功能，从某种角度讲应该是为未来的拓展升级做准备吧。</TextBlock>
+                        <TextBlock FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Margin="0,5">Q：语言识别的精度太差了，有什么办法可以让它精确些？</TextBlock>
+                        <TextBlock TextWrapping="Wrap">A：语言识别的原理是利用各国语言的特征进行识别的，也就是说如果特性不明显机器就难以判断语种，进而导致出错。增加输入样本量可以提高检测准确度。本软件可对歌曲的标题和歌词（如果本地有的话）进行语言识别，仅有标题的话数据量实在太少，最好添加上歌词试试（当然是本国语言，不能翻译）。</TextBlock>
+                        <TextBlock FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Margin="0,5">Q：为什么调用开机启动权限？</TextBlock>
+                        <TextBlock TextWrapping="Wrap">A：我也纳闷怎么就调用了开机启动权限，360出来挨打！</TextBlock>
+                        <TextBlock FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Margin="0,5">Q：win7在点击某些打开超链接的控件时崩溃？（比如前往更新地址等）</TextBlock>
+                        <TextBlock TextWrapping="Wrap">A：这个程序中调用浏览器打开网页是用命令行实现的，虽然在win10中没问题，但是这个命令在win7中好像需要管理员权限才能执行，没有就会崩溃。您可以手动打开链接（项目页面地址在获取支持页面）或者使用管理员权限打开这个程序。</TextBlock>
+                        <!--<TextBlock FontSize="15" FontWeight="Bold" TextWrapping="Wrap" Margin="0,5">Q：</TextBlock>
+                        <TextBlock TextWrapping="Wrap">A：</TextBlock>-->
+                        <StackPanel Orientation="Horizontal" Margin="0,20">
+                            <TextBlock FontSize="15" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Center">不知道如何操作？点击</TextBlock>
+                            <Button Name="TeachButton" Width="50" Margin="3" Click="TeachButton_OnClick">这里</Button>
+                            <TextBlock FontSize="15" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Center">查看在线教程</TextBlock>
+                        </StackPanel>
+                        
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="获取支持">
+                <StackPanel Margin="10">
+                    <GroupBox Header="Hey Here!">
+                        <StackPanel Margin="5">
+                            <TextBlock TextWrapping="Wrap">该程序侵犯了您的权益？运行出现了问题？有十分需要的功能或新的想法？您可以访问这个软件的项目页进行留言，我将及时答复：</TextBlock>
+                            <TextBlock Foreground="Blue" Name="ProjectURL" PreviewMouseDown="ProjectURL_OnPreviewMouseDown">http://upane.cn/archives/509</TextBlock>
+                            <TextBlock TextWrapping="Wrap">该程序将在近期开源，如果需要源码，可以关注我的Github账户：</TextBlock>
+                            <TextBlock Foreground="Blue" Name="GitURL" PreviewMouseDown="GitURL_OnPreviewMouseDown">https://github.com/yimig</TextBlock>
+                            <TextBlock TextWrapping="Wrap">另外，您也可以关注我的个人博客，偶尔会分享些写代码的心得：</TextBlock>
+                            <TextBlock Foreground="Blue" Name="BlogURL" PreviewMouseDown="BlogURL_OnPreviewMouseDown">http://upane.cn</TextBlock>
+                            <TextBlock>菜鸟一只，还望各路大佬还望轻喷。</TextBlock>
+                            <TextBlock>2019/2/8</TextBlock>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

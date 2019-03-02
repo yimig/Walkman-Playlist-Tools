@@ -1,0 +1,1286 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Abot</name>
+    </assembly>
+    <members>
+        <member name="P:Abot.Core.AuthorizationElement.IsAlwaysLogin">
+            <summary>
+            Defines whatewer each request shold be autorized via login 
+            </summary>
+        </member>
+        <member name="P:Abot.Core.AuthorizationElement.LoginUser">
+            <summary>
+            The user name to be used for autorization 
+            </summary>
+        </member>
+        <member name="P:Abot.Core.AuthorizationElement.LoginPassword">
+            <summary>
+            The password to be used for autorization 
+            </summary>
+        </member>
+        <member name="P:Abot.Core.AuthorizationElement.UseDefaultCredentials">
+            <summary>
+            Specifies whether to use default credentials. 
+            </summary>
+        </member>
+        <member name="T:Abot.Core.CompactCrawledUrlRepository">
+            <summary>
+            Implementation that stores a numeric hash of the url instead of the url itself to use for lookups. This should save space when the crawled url list gets very long. 
+            </summary>
+        </member>
+        <member name="M:Abot.Core.CompactCrawledUrlRepository.Contains(System.Uri)">
+            <inheritDoc />
+        </member>
+        <member name="M:Abot.Core.CompactCrawledUrlRepository.AddIfNew(System.Uri)">
+            <inheritDoc />
+        </member>
+        <member name="M:Abot.Core.CompactCrawledUrlRepository.Dispose">
+            <inheritDoc />
+        </member>
+        <member name="T:Abot.Core.AngleSharpHyperlinkParser">
+            <summary>
+            Parser that uses AngleSharp https://github.com/AngleSharp/AngleSharp to parse page links
+            </summary>
+        </member>
+        <member name="T:Abot.Core.IHyperLinkParser">
+            <summary>
+            Handles parsing hyperlinks out of the raw html
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IHyperLinkParser.GetLinks(Abot.Poco.CrawledPage)">
+            <summary>
+            Parses html to extract hyperlinks, converts each into an absolute url
+            </summary>
+        </member>
+        <member name="M:Abot.Core.HyperLinkParser.GetLinks(Abot.Poco.CrawledPage)">
+            <summary>
+            Parses html to extract hyperlinks, converts each into an absolute url
+            </summary>
+        </member>
+        <member name="T:Abot.Crawler.RobotsDotTextParseCompletedArgs">
+            <summary>
+            Class which hold robot txt data after successful parsing
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.RobotsDotTextParseCompletedArgs.#ctor(Abot.Poco.CrawlContext,Robots.IRobots)">
+            <summary>
+            Contructor to be used to create an object which will path arugments when robots txt is parsed
+            </summary>
+            <param name="crawlContext"></param>
+            <param name="robots"></param>
+        </member>
+        <member name="P:Abot.Crawler.RobotsDotTextParseCompletedArgs.Robots">
+            <summary>
+            robots.txt object
+            </summary>
+        </member>
+        <member name="T:Abot.Poco.HttpWebResponseWrapper">
+            <summary>Result of crawling a page</summary>
+            <remarks>
+            We use this wrapper class to enable using responses obtained by methods different than executing an HttpWebRequest.
+            E.g. one may use a browser control embedded in the application to get a page content and construct an instance of this class
+            to pass it to Abot.
+            </remarks>
+        </member>
+        <member name="M:Abot.Poco.HttpWebResponseWrapper.#ctor(System.Net.HttpWebResponse)">
+            <summary>Constructs a response based on the received system http response.</summary>
+        </member>
+        <member name="M:Abot.Poco.HttpWebResponseWrapper.#ctor(System.Net.HttpStatusCode,System.String,System.Byte[],System.Collections.Specialized.NameValueCollection)">
+            <summary>Constructs a response based on custom parameters.</summary>
+            <remarks>Recieves parameters neccesarily set for Abot to work.</remarks>
+        </member>
+        <member name="M:Abot.Poco.HttpWebResponseWrapper.#ctor">
+            <summary>Constructs an empty response to be filled later.</summary>
+        </member>
+        <member name="M:Abot.Poco.HttpWebResponseWrapper.GetResponseStream">
+            <summary>Gets the actual response data.</summary>
+        </member>
+        <member name="M:Abot.Poco.HttpWebResponseWrapper.GetResponseHeader(System.String)">
+            <summary>Gets the header with the given name.</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.StatusCode">
+            <summary>Status code returned by the server</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.ContentType">
+            <summary>Server designated type of content</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.ContentLength">
+            <summary>Server designated length of content in bytes</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.Headers">
+            <summary>Collection of headers in the response</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.CharacterSet">
+            <summary>Gets the character set of the response.</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.ContentEncoding">
+            <summary>Gets the method that is used to encode the body of the response.</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.Cookies">
+            <summary>Gets or sets the cookies that are associated with this response.</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.IsFromCache">
+            <summary>Was the response generated from the local cache?</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.IsMutuallyAuthenticated">
+            <summary>Gets a System.Boolean value that indicates whether both client and server were authenticated.</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.LastModified">
+            <summary>Gets the last date and time that the contents of the response were modified.</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.Method">
+            <summary>Gets the method that is used to return the response.</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.ProtocolVersion">
+            <summary>Gets the version of the HTTP protocol that is used in the response.</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.ResponseUri">
+            <summary>Gets the URI of the Internet resource that responded to the request.</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.Server">
+            <summary>Gets the name of the server that sent the response.</summary>
+        </member>
+        <member name="P:Abot.Poco.HttpWebResponseWrapper.StatusDescription">
+            <summary>Gets the status description returned with the response.</summary>
+        </member>
+        <member name="T:Abot.Util.BloomFilter`1">
+            <summary>
+            Bloom filter.
+            </summary>
+            <typeparam name="T">Item type </typeparam>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.#ctor(System.Int32)">
+            <summary>
+            Creates a new Bloom filter, specifying an error rate of 1/capacity, using the optimal size for the underlying data structure based on the desired capacity and error rate, as well as the optimal number of hash functions.
+            A secondary hash function will be provided for you if your type T is either string or int. Otherwise an exception will be thrown. If you are not using these types please use the overload that supports custom hash functions.
+            </summary>
+            <param name="capacity">The anticipated number of items to be added to the filter. More than this number of items can be added, but the error rate will exceed what is expected.</param>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.#ctor(System.Int32,System.Single)">
+            <summary>
+            Creates a new Bloom filter, using the optimal size for the underlying data structure based on the desired capacity and error rate, as well as the optimal number of hash functions.
+            A secondary hash function will be provided for you if your type T is either string or int. Otherwise an exception will be thrown. If you are not using these types please use the overload that supports custom hash functions.
+            </summary>
+            <param name="capacity">The anticipated number of items to be added to the filter. More than this number of items can be added, but the error rate will exceed what is expected.</param>
+            <param name="errorRate">The accepable false-positive rate (e.g., 0.01F = 1%)</param>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.#ctor(System.Int32,Abot.Util.BloomFilter{`0}.HashFunction)">
+            <summary>
+            Creates a new Bloom filter, specifying an error rate of 1/capacity, using the optimal size for the underlying data structure based on the desired capacity and error rate, as well as the optimal number of hash functions.
+            </summary>
+            <param name="capacity">The anticipated number of items to be added to the filter. More than this number of items can be added, but the error rate will exceed what is expected.</param>
+            <param name="hashFunction">The function to hash the input values. Do not use GetHashCode(). If it is null, and T is string or int a hash function will be provided for you.</param>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.#ctor(System.Int32,System.Single,Abot.Util.BloomFilter{`0}.HashFunction)">
+            <summary>
+            Creates a new Bloom filter, using the optimal size for the underlying data structure based on the desired capacity and error rate, as well as the optimal number of hash functions.
+            </summary>
+            <param name="capacity">The anticipated number of items to be added to the filter. More than this number of items can be added, but the error rate will exceed what is expected.</param>
+            <param name="errorRate">The accepable false-positive rate (e.g., 0.01F = 1%)</param>
+            <param name="hashFunction">The function to hash the input values. Do not use GetHashCode(). If it is null, and T is string or int a hash function will be provided for you.</param>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.#ctor(System.Int32,System.Single,Abot.Util.BloomFilter{`0}.HashFunction,System.Int32,System.Int32)">
+            <summary>
+            Creates a new Bloom filter.
+            </summary>
+            <param name="capacity">The anticipated number of items to be added to the filter. More than this number of items can be added, but the error rate will exceed what is expected.</param>
+            <param name="errorRate">The accepable false-positive rate (e.g., 0.01F = 1%)</param>
+            <param name="hashFunction">The function to hash the input values. Do not use GetHashCode(). If it is null, and T is string or int a hash function will be provided for you.</param>
+            <param name="m">The number of elements in the BitArray.</param>
+            <param name="k">The number of hash functions to use.</param>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.Add(`0)">
+            <summary>
+            Adds a new item to the filter. It cannot be removed.
+            </summary>
+            <param name="item">The item.</param>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.Contains(`0)">
+            <summary>
+            Checks for the existance of the item in the filter for a given probability.
+            </summary>
+            <param name="item"> The item. </param>
+            <returns> The <see cref="T:System.Boolean"/>. </returns>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.BestK(System.Int32,System.Single)">
+            <summary>
+            The best k.
+            </summary>
+            <param name="capacity"> The capacity. </param>
+            <param name="errorRate"> The error rate. </param>
+            <returns> The <see cref="T:System.Int32"/>. </returns>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.BestM(System.Int32,System.Single)">
+            <summary>
+            The best m.
+            </summary>
+            <param name="capacity"> The capacity. </param>
+            <param name="errorRate"> The error rate. </param>
+            <returns> The <see cref="T:System.Int32"/>. </returns>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.BestErrorRate(System.Int32)">
+            <summary>
+            The best error rate.
+            </summary>
+            <param name="capacity"> The capacity. </param>
+            <returns> The <see cref="T:System.Single"/>. </returns>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.HashInt32(`0)">
+            <summary>
+            Hashes a 32-bit signed int using Thomas Wang's method v3.1 (http://www.concentric.net/~Ttwang/tech/inthash.htm).
+            Runtime is suggested to be 11 cycles. 
+            </summary>
+            <param name="input">The integer to hash.</param>
+            <returns>The hashed result.</returns>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.HashString(`0)">
+            <summary>
+            Hashes a string using Bob Jenkin's "One At A Time" method from Dr. Dobbs (http://burtleburtle.net/bob/hash/doobs.html).
+            Runtime is suggested to be 9x+9, where x = input.Length. 
+            </summary>
+            <param name="input">The string to hash.</param>
+            <returns>The hashed result.</returns>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.TrueBits">
+            <summary>
+            The true bits.
+            </summary>
+            <returns> The <see cref="T:System.Int32"/>. </returns>
+        </member>
+        <member name="M:Abot.Util.BloomFilter`1.ComputeHash(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Performs Dillinger and Manolios double hashing. 
+            </summary>
+            <param name="primaryHash"> The primary hash. </param>
+            <param name="secondaryHash"> The secondary hash. </param>
+            <param name="i"> The i. </param>
+            <returns> The <see cref="T:System.Int32"/>. </returns>
+        </member>
+        <member name="P:Abot.Util.BloomFilter`1.Truthiness">
+            <summary>
+            The ratio of false to true bits in the filter. E.g., 1 true bit in a 10 bit filter means a truthiness of 0.1.
+            </summary>
+        </member>
+        <member name="T:Abot.Util.BloomFilter`1.HashFunction">
+            <summary>
+            A function that can be used to hash input.
+            </summary>
+            <param name="input">The values to be hashed.</param>
+            <returns>The resulting hash code.</returns>
+        </member>
+        <member name="T:Abot.Core.IScheduler">
+            <summary>
+            Handles managing the priority of what pages need to be crawled
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IScheduler.Add(Abot.Poco.PageToCrawl)">
+            <summary>
+            Schedules the param to be crawled
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IScheduler.Add(System.Collections.Generic.IEnumerable{Abot.Poco.PageToCrawl})">
+            <summary>
+            Schedules the param to be crawled
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IScheduler.GetNext">
+            <summary>
+            Gets the next page to crawl
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IScheduler.Clear">
+            <summary>
+            Clear all currently scheduled pages
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IScheduler.AddKnownUri(System.Uri)">
+            <summary>
+            Add the Url to the list of crawled Url without scheduling it to be crawled.
+            </summary>
+            <param name="uri"></param>
+        </member>
+        <member name="M:Abot.Core.IScheduler.IsUriKnown(System.Uri)">
+            <summary>
+            Returns whether or not the specified Uri was already scheduled to be crawled or simply added to the
+            list of known Uris.
+            </summary>
+        </member>
+        <member name="P:Abot.Core.IScheduler.Count">
+            <summary>
+            Count of remaining items that are currently scheduled
+            </summary>
+        </member>
+        <member name="T:Abot.Util.ManualThreadManager">
+            <summary>
+            A ThreadManager implementation that will use real Threads to handle concurrency.
+            </summary>
+        </member>
+        <member name="T:Abot.Util.IThreadManager">
+            <summary>
+            Handles the multithreading implementation details
+            </summary>
+        </member>
+        <member name="M:Abot.Util.IThreadManager.DoWork(System.Action)">
+            <summary>
+            Will perform the action asynchrously on a seperate thread
+            </summary>
+            <param name="action">The action to perform</param>
+        </member>
+        <member name="M:Abot.Util.IThreadManager.HasRunningThreads">
+            <summary>
+            Whether there are running threads
+            </summary>
+        </member>
+        <member name="M:Abot.Util.IThreadManager.AbortAll">
+            <summary>
+            Abort all running threads
+            </summary>
+        </member>
+        <member name="P:Abot.Util.IThreadManager.MaxThreads">
+            <summary>
+            Max number of threads to use.
+            </summary>
+        </member>
+        <member name="M:Abot.Util.ThreadManager.DoWork(System.Action)">
+            <summary>
+            Will perform the action asynchrously on a seperate thread
+            </summary>
+        </member>
+        <member name="M:Abot.Util.ThreadManager.RunActionOnDedicatedThread(System.Action)">
+            <summary>
+            Runs the action on a seperate thread
+            </summary>
+        </member>
+        <member name="P:Abot.Util.ThreadManager.MaxThreads">
+            <summary>
+            Max number of threads to use
+            </summary>
+        </member>
+        <member name="T:Abot.Util.IMemoryManager">
+            <summary>
+            Handles memory monitoring/usage
+            </summary>
+        </member>
+        <member name="M:Abot.Util.IMemoryManager.IsCurrentUsageAbove(System.Int32)">
+            <summary>
+            Whether the current process that is hosting this instance is allocated/using above the param value of memory in mb
+            </summary>
+        </member>
+        <member name="M:Abot.Util.IMemoryManager.IsSpaceAvailable(System.Int32)">
+            <summary>
+            Whether there is at least the param value of available memory in mb
+            </summary>
+        </member>
+        <member name="T:Abot.Core.HapHyperLinkParser">
+            <summary>
+            Parser that uses Html Agility Pack http://htmlagilitypack.codeplex.com/ to parse page links
+            </summary>
+        </member>
+        <member name="T:Abot.Core.ICrawlDecisionMaker">
+            <summary>
+            Determines what pages should be crawled, whether the raw content should be downloaded and if the links on a page should be crawled
+            </summary>
+        </member>
+        <member name="M:Abot.Core.ICrawlDecisionMaker.ShouldCrawlPage(Abot.Poco.PageToCrawl,Abot.Poco.CrawlContext)">
+            <summary>
+            Decides whether the page should be crawled
+            </summary>
+        </member>
+        <member name="M:Abot.Core.ICrawlDecisionMaker.ShouldCrawlPageLinks(Abot.Poco.CrawledPage,Abot.Poco.CrawlContext)">
+            <summary>
+            Decides whether the page's links should be crawled
+            </summary>
+        </member>
+        <member name="M:Abot.Core.ICrawlDecisionMaker.ShouldDownloadPageContent(Abot.Poco.CrawledPage,Abot.Poco.CrawlContext)">
+            <summary>
+            Decides whether the page's content should be dowloaded
+            </summary>
+        </member>
+        <member name="M:Abot.Core.ICrawlDecisionMaker.ShouldRecrawlPage(Abot.Poco.CrawledPage,Abot.Poco.CrawlContext)">
+            <summary>
+            Decides whether the page should be re-crawled
+            </summary>
+        </member>
+        <member name="T:Abot.Core.IDomainRateLimiter">
+            <summary>
+            Rate limits or throttles on a per domain basis
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IDomainRateLimiter.RateLimit(System.Uri)">
+            <summary>
+            If the domain of the param has been flagged for rate limiting, it will be rate limited according to the configured minimum crawl delay
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IDomainRateLimiter.AddDomain(System.Uri,System.Int64)">
+            <summary>
+            Add a domain entry so that domain may be rate limited according the the param minumum crawl delay
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IDomainRateLimiter.AddOrUpdateDomain(System.Uri,System.Int64)">
+            <summary>
+            Add/Update a domain entry so that domain may be rate limited according the the param minumum crawl delay
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IDomainRateLimiter.RemoveDomain(System.Uri)">
+            <summary>
+            Remove a domain entry so that it will no longer be rate limited
+            </summary>
+        </member>
+        <member name="T:Abot.Util.RateLimiter">
+            <summary>
+            Used to control the rate of some occurrence per unit of time.
+            </summary>
+            <remarks>
+                <para>
+                To control the rate of an action using a <see cref="T:Abot.Util.RateLimiter"/>, 
+                code should simply call <see cref="M:Abot.Util.RateLimiter.WaitToProceed"/> prior to 
+                performing the action. <see cref="M:Abot.Util.RateLimiter.WaitToProceed"/> will block
+                the current thread until the action is allowed based on the rate 
+                limit.
+                </para>
+                <para>
+                This class is thread safe. A single <see cref="T:Abot.Util.RateLimiter"/> instance 
+                may be used to control the rate of an occurrence across multiple 
+                threads.
+                </para>
+            </remarks>
+        </member>
+        <member name="M:Abot.Util.RateLimiter.#ctor(System.Int32,System.TimeSpan)">
+            <summary>
+            Initializes a <see cref="T:Abot.Util.RateLimiter"/> with a rate of <paramref name="occurrences"/> 
+            per <paramref name="timeUnit"/>.
+            </summary>
+            <param name="occurrences">Number of occurrences allowed per unit of time.</param>
+            <param name="timeUnit">Length of the time unit.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            If <paramref name="occurrences"/> or <paramref name="timeUnit"/> is negative.
+            </exception>
+        </member>
+        <member name="M:Abot.Util.RateLimiter.WaitToProceed(System.Int32)">
+            <summary>
+            Blocks the current thread until allowed to proceed or until the
+            specified timeout elapses.
+            </summary>
+            <param name="millisecondsTimeout">Number of milliseconds to wait, or -1 to wait indefinitely.</param>
+            <returns>true if the thread is allowed to proceed, or false if timed out</returns>
+        </member>
+        <member name="M:Abot.Util.RateLimiter.WaitToProceed(System.TimeSpan)">
+            <summary>
+            Blocks the current thread until allowed to proceed or until the
+            specified timeout elapses.
+            </summary>
+            <param name="timeout"></param>
+            <returns>true if the thread is allowed to proceed, or false if timed out</returns>
+        </member>
+        <member name="M:Abot.Util.RateLimiter.WaitToProceed">
+            <summary>
+            Blocks the current thread indefinitely until allowed to proceed.
+            </summary>
+        </member>
+        <member name="M:Abot.Util.RateLimiter.Dispose">
+            <summary>
+            Releases unmanaged resources held by an instance of this class.
+            </summary>
+        </member>
+        <member name="M:Abot.Util.RateLimiter.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged resources held by an instance of this class.
+            </summary>
+            <param name="isDisposing">Whether this object is being disposed.</param>
+        </member>
+        <member name="P:Abot.Util.RateLimiter.Occurrences">
+            <summary>
+            Number of occurrences allowed per unit of time.
+            </summary>
+        </member>
+        <member name="P:Abot.Util.RateLimiter.TimeUnitMilliseconds">
+            <summary>
+            The length of the time unit, in milliseconds.
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IRobotsDotText.GetCrawlDelay(System.String)">
+            <summary>
+            Gets the number of seconds to delay between internal page crawls. Returns 0 by default.
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IRobotsDotText.IsUrlAllowed(System.String,System.String)">
+            <summary>
+            Whether the spider is "allowed" to crawl the param link
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IRobotsDotText.IsUserAgentAllowed(System.String)">
+            <summary>
+            Whether the user agent is "allowed" to crawl the root url
+            </summary>
+        </member>
+        <member name="P:Abot.Core.IRobotsDotText.Robots">
+            <summary>
+            Instance of robot.txt object
+            </summary>
+        </member>
+        <member name="T:Abot.Core.IRobotsDotTextFinder">
+            <summary>
+            Finds and builds the robots.txt file abstraction
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IRobotsDotTextFinder.Find(System.Uri)">
+            <summary>
+            Finds the robots.txt file using the rootUri. 
+            If rootUri is http://yahoo.com, it will look for robots at http://yahoo.com/robots.txt.
+            If rootUri is http://music.yahoo.com, it will look for robots at http://music.yahoo.com/robots.txt
+            </summary>
+            <param name="rootUri">The root domain</param>
+            <returns>Object representing the robots.txt file or returns null</returns>
+        </member>
+        <member name="T:Abot.Util.TaskThreadManager">
+            <summary>
+            A ThreadManager implementation that will use tpl Tasks to handle concurrency.
+            </summary>
+        </member>
+        <member name="M:Abot.Util.TaskThreadManager.HandleAggregateExceptions(System.Threading.Tasks.Task)">
+            <summary>
+            This was added to resolve the issue described here
+            http://stackoverflow.com/questions/7883052/a-tasks-exceptions-were-not-observed-either-by-waiting-on-the-task-or-accessi
+            </summary>
+        </member>
+        <member name="T:Abot.Crawler.IPoliteWebCrawler">
+            <summary>
+            Polite web crawler
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.IWebCrawler.ShouldCrawlPage(System.Func{Abot.Poco.PageToCrawl,Abot.Poco.CrawlContext,Abot.Poco.CrawlDecision})">
+            <summary>
+            Synchronous method that registers a delegate to be called to determine whether a page should be crawled or not
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.IWebCrawler.ShouldDownloadPageContent(System.Func{Abot.Poco.CrawledPage,Abot.Poco.CrawlContext,Abot.Poco.CrawlDecision})">
+            <summary>
+            Synchronous method that registers a delegate to be called to determine whether the page's content should be dowloaded
+            </summary>
+            <param name="shouldDownloadPageContent"></param>
+        </member>
+        <member name="M:Abot.Crawler.IWebCrawler.ShouldCrawlPageLinks(System.Func{Abot.Poco.CrawledPage,Abot.Poco.CrawlContext,Abot.Poco.CrawlDecision})">
+            <summary>
+            Synchronous method that registers a delegate to be called to determine whether a page's links should be crawled or not
+            </summary>
+            <param name="shouldCrawlPageLinksDelegate"></param>
+        </member>
+        <member name="M:Abot.Crawler.IWebCrawler.ShouldScheduleLink(System.Func{System.Uri,Abot.Poco.CrawledPage,Abot.Poco.CrawlContext,System.Boolean})">
+            <summary>
+            Synchronous method that registers a delegate to be called to determine whether a cerain link on a page should be scheduled to be crawled
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.IWebCrawler.ShouldRecrawlPage(System.Func{Abot.Poco.CrawledPage,Abot.Poco.CrawlContext,Abot.Poco.CrawlDecision})">
+            <summary>
+            Synchronous method that registers a delegate to be called to determine whether a page should be recrawled
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.IWebCrawler.IsInternalUri(System.Func{System.Uri,System.Uri,System.Boolean})">
+            <summary>
+            Synchronous method that registers a delegate to be called to determine whether the 1st uri param is considered an internal uri to the second uri param
+            </summary>
+            <param name="decisionMaker delegate"></param>
+        </member>
+        <member name="M:Abot.Crawler.IWebCrawler.Crawl(System.Uri)">
+            <summary>
+            Begins a crawl using the uri param
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.IWebCrawler.Crawl(System.Uri,System.Threading.CancellationTokenSource)">
+            <summary>
+            Begins a crawl using the uri param, and can be cancelled using the CancellationToken
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.IWebCrawler.PageCrawlStarting">
+            <summary>
+            Synchronous event that is fired before a page is crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.IWebCrawler.PageCrawlCompleted">
+            <summary>
+            Synchronous event that is fired when an individual page has been crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.IWebCrawler.PageCrawlDisallowed">
+            <summary>
+            Synchronous event that is fired when the ICrawlDecisionMaker.ShouldCrawl impl returned false. This means the page or its links were not crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.IWebCrawler.PageLinksCrawlDisallowed">
+            <summary>
+            Synchronous event that is fired when the ICrawlDecisionMaker.ShouldCrawlLinks impl returned false. This means the page's links were not crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.IWebCrawler.PageCrawlStartingAsync">
+            <summary>
+            Asynchronous event that is fired before a page is crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.IWebCrawler.PageCrawlCompletedAsync">
+            <summary>
+            Asynchronous event that is fired when an individual page has been crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.IWebCrawler.PageCrawlDisallowedAsync">
+            <summary>
+            Asynchronous event that is fired when the ICrawlDecisionMaker.ShouldCrawl impl returned false. This means the page or its links were not crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.IWebCrawler.PageLinksCrawlDisallowedAsync">
+            <summary>
+            Asynchronous event that is fired when the ICrawlDecisionMaker.ShouldCrawlLinks impl returned false. This means the page's links were not crawled.
+            </summary>
+        </member>
+        <member name="P:Abot.Crawler.IWebCrawler.CrawlBag">
+            <summary>
+            Dynamic object that can hold any value that needs to be available in the crawl context
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.IPoliteWebCrawler.RobotsDotTextParseCompletedAsync">
+            <summary>
+            Event occur after robots txt is parsed asynchroniously
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.IPoliteWebCrawler.RobotsDotTextParseCompleted">
+            <summary>
+            Event occur after robots txt is parsed synchroniously
+            </summary>
+        </member>
+        <member name="T:Abot.Crawler.PoliteWebCrawler">
+            <summary>
+            Extends the WebCrawler class and added politeness features like crawl delays and respecting robots.txt files. 
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.WebCrawler.#ctor">
+            <summary>
+            Creates a crawler instance with the default settings and implementations.
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.WebCrawler.#ctor(Abot.Poco.CrawlConfiguration,Abot.Core.ICrawlDecisionMaker,Abot.Util.IThreadManager,Abot.Core.IScheduler,Abot.Core.IPageRequester,Abot.Core.IHyperLinkParser,Abot.Util.IMemoryManager)">
+            <summary>
+            Creates a crawler instance with custom settings or implementation. Passing in null for all params is the equivalent of the empty constructor.
+            </summary>
+            <param name="threadManager">Distributes http requests over multiple threads</param>
+            <param name="scheduler">Decides what link should be crawled next</param>
+            <param name="pageRequester">Makes the raw http requests</param>
+            <param name="hyperLinkParser">Parses a crawled page for it's hyperlinks</param>
+            <param name="crawlDecisionMaker">Decides whether or not to crawl a page or that page's links</param>
+            <param name="crawlConfiguration">Configurable crawl values</param>
+            <param name="memoryManager">Checks the memory usage of the host process</param>
+        </member>
+        <member name="M:Abot.Crawler.WebCrawler.Crawl(System.Uri)">
+            <summary>
+            Begins a synchronous crawl using the uri param, subscribe to events to process data as it becomes available
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.WebCrawler.Crawl(System.Uri,System.Threading.CancellationTokenSource)">
+            <summary>
+            Begins a synchronous crawl using the uri param, subscribe to events to process data as it becomes available
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.WebCrawler.ShouldCrawlPage(System.Func{Abot.Poco.PageToCrawl,Abot.Poco.CrawlContext,Abot.Poco.CrawlDecision})">
+            <summary>
+            Synchronous method that registers a delegate to be called to determine whether a page should be crawled or not
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.WebCrawler.ShouldDownloadPageContent(System.Func{Abot.Poco.CrawledPage,Abot.Poco.CrawlContext,Abot.Poco.CrawlDecision})">
+            <summary>
+            Synchronous method that registers a delegate to be called to determine whether the page's content should be dowloaded
+            </summary>
+            <param name="shouldDownloadPageContent"></param>
+        </member>
+        <member name="M:Abot.Crawler.WebCrawler.ShouldCrawlPageLinks(System.Func{Abot.Poco.CrawledPage,Abot.Poco.CrawlContext,Abot.Poco.CrawlDecision})">
+            <summary>
+            Synchronous method that registers a delegate to be called to determine whether a page's links should be crawled or not
+            </summary>
+            <param name="shouldCrawlPageLinksDelegate"></param>
+        </member>
+        <member name="M:Abot.Crawler.WebCrawler.ShouldScheduleLink(System.Func{System.Uri,Abot.Poco.CrawledPage,Abot.Poco.CrawlContext,System.Boolean})">
+            <summary>
+            Synchronous method that registers a delegate to be called to determine whether a cerain link on a page should be scheduled to be crawled
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.WebCrawler.ShouldRecrawlPage(System.Func{Abot.Poco.CrawledPage,Abot.Poco.CrawlContext,Abot.Poco.CrawlDecision})">
+            <summary>
+            Synchronous method that registers a delegate to be called to determine whether a page should be recrawled or not
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.WebCrawler.IsInternalUri(System.Func{System.Uri,System.Uri,System.Boolean})">
+            <summary>
+            Synchronous method that registers a delegate to be called to determine whether the 1st uri param is considered an internal uri to the second uri param
+            </summary>
+            <param name="decisionMaker delegate"></param>     
+        </member>
+        <member name="M:Abot.Crawler.WebCrawler.ValidateRootUriForRedirection(Abot.Poco.CrawledPage)">
+            <summary>
+            Validate that the Root page was not redirected. If the root page is redirected, we assume that the root uri
+            should be changed to the uri where it was redirected.
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.WebCrawler.ExtractRedirectUri(Abot.Poco.CrawledPage)">
+            <summary>
+            Retrieve the URI where the specified crawled page was redirected.
+            </summary>
+            <remarks>
+            If HTTP auto redirections is disabled, this value is stored in the 'Location' header of the response.
+            If auto redirections is enabled, this value is stored in the response's ResponseUri property.
+            </remarks>
+        </member>
+        <member name="P:Abot.Crawler.WebCrawler.CrawlBag">
+            <summary>
+            Dynamic object that can hold any value that needs to be available in the crawl context
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.WebCrawler.PageCrawlStarting">
+            <summary>
+            Synchronous event that is fired before a page is crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.WebCrawler.PageCrawlCompleted">
+            <summary>
+            Synchronous event that is fired when an individual page has been crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.WebCrawler.PageCrawlDisallowed">
+            <summary>
+            Synchronous event that is fired when the ICrawlDecisionMaker.ShouldCrawl impl returned false. This means the page or its links were not crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.WebCrawler.PageLinksCrawlDisallowed">
+            <summary>
+            Synchronous event that is fired when the ICrawlDecisionMaker.ShouldCrawlLinks impl returned false. This means the page's links were not crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.WebCrawler.PageCrawlStartingAsync">
+            <summary>
+            Asynchronous event that is fired before a page is crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.WebCrawler.PageCrawlCompletedAsync">
+            <summary>
+            Asynchronous event that is fired when an individual page has been crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.WebCrawler.PageCrawlDisallowedAsync">
+            <summary>
+            Asynchronous event that is fired when the ICrawlDecisionMaker.ShouldCrawl impl returned false. This means the page or its links were not crawled.
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.WebCrawler.PageLinksCrawlDisallowedAsync">
+            <summary>
+            Asynchronous event that is fired when the ICrawlDecisionMaker.ShouldCrawlLinks impl returned false. This means the page's links were not crawled.
+            </summary>
+        </member>
+        <member name="M:Abot.Crawler.PoliteWebCrawler.FireRobotsDotTextParseCompletedAsync(Robots.IRobots)">
+            <summary>
+            Fire robots txt parsed completed async
+            </summary>
+            <param name="robots"></param>
+        </member>
+        <member name="M:Abot.Crawler.PoliteWebCrawler.FireRobotsDotTextParseCompleted(Robots.IRobots)">
+            <summary>
+            Fire robots txt parsed completed
+            </summary>
+            <param name="robots"></param>
+        </member>
+        <member name="E:Abot.Crawler.PoliteWebCrawler.RobotsDotTextParseCompletedAsync">
+            <summary>
+            Event occur after robots txt is parsed asynchroniously
+            </summary>
+        </member>
+        <member name="E:Abot.Crawler.PoliteWebCrawler.RobotsDotTextParseCompleted">
+            <summary>
+            Event occur after robots txt is parsed synchroniously
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MaxConcurrentThreads">
+            <summary>
+            Max concurrent threads to use for http requests
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MaxPagesToCrawl">
+            <summary>
+            Maximum number of pages to crawl. 
+            If zero, this setting has no effect
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MaxPagesToCrawlPerDomain">
+            <summary>
+            Maximum number of pages to crawl per domain
+            If zero, this setting has no effect.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MaxPageSizeInBytes">
+            <summary>
+            Maximum size of page. If the page size is above this value, it will not be downloaded or processed
+            If zero, this setting has no effect.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.UserAgentString">
+            <summary>
+            The user agent string to use for http requests
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.HttpProtocolVersion">
+            <summary>
+            The http protocol version number to use during http requests. Currently supporting values "1.1" and "1.0". 
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.CrawlTimeoutSeconds">
+            <summary>
+            Maximum seconds before the crawl times out and stops. 
+            If zero, this setting has no effect.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.ConfigurationExtensions">
+            <summary>
+            Dictionary that stores additional key-value pairs that can be accessed through the crawl pipeline
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsUriRecrawlingEnabled">
+            <summary>
+            Whether Uris should be crawled more than once. This is not common and should be false for most scenarios
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsExternalPageCrawlingEnabled">
+            <summary>
+            Whether pages external to the root uri should be crawled
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsExternalPageLinksCrawlingEnabled">
+            <summary>
+            Whether pages external to the root uri should have their links crawled. NOTE: IsExternalPageCrawlEnabled must be true for this setting to have any effect
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsRespectUrlNamedAnchorOrHashbangEnabled">
+            <summary>
+            Whether or not url named anchors or hashbangs are considered part of the url. If false, they will be ignored. If true, they will be considered part of the url.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.DownloadableContentTypes">
+            <summary>
+            A comma seperated string that has content types that should have their page content downloaded. For each page, the content type is checked to see if it contains any of the values defined here.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.HttpServicePointConnectionLimit">
+            <summary>
+            Gets or sets the maximum number of concurrent connections allowed by a System.Net.ServicePoint. The system default is 2. This means that only 2 concurrent http connections can be open to the same host.
+            If zero, this setting has no effect.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.HttpRequestTimeoutInSeconds">
+            <summary>
+            Gets or sets the time-out value in seconds for the System.Net.HttpWebRequest.GetResponse() and System.Net.HttpWebRequest.GetRequestStream() methods.
+            If zero, this setting has no effect.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.HttpRequestMaxAutoRedirects">
+            <summary>
+            Gets or sets the maximum number of redirects that the request follows.
+            If zero, this setting has no effect.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsHttpRequestAutoRedirectsEnabled">
+            <summary>
+            Gets or sets a value that indicates whether the request should follow redirection
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsHttpRequestAutomaticDecompressionEnabled">
+            <summary>
+            Gets or sets a value that indicates gzip and deflate will be automatically accepted and decompressed
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsSendingCookiesEnabled">
+            <summary>
+            Whether the cookies should be set and resent with every request
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsSslCertificateValidationEnabled">
+            <summary>
+            Whether or not to validate the server SSL certificate. If true, the default validation will be made.
+            If false, the certificate validation is bypassed. This setting is useful to crawl sites with an
+            invalid or expired SSL certificate.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MinAvailableMemoryRequiredInMb">
+            <summary>
+            Uses closest multiple of 16 to the value set. If there is not at least this much memory available before starting a crawl, throws InsufficientMemoryException.
+            If zero, this setting has no effect.
+            </summary>
+            <exception cref="!:http://msdn.microsoft.com/en-us/library/system.insufficientmemoryexception.aspx">InsufficientMemoryException</exception>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MaxMemoryUsageInMb">
+            <summary>
+            The max amount of memory to allow the process to use. If this limit is exceeded the crawler will stop prematurely.
+            If zero, this setting has no effect.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MaxMemoryUsageCacheTimeInSeconds">
+            <summary>
+            The max amount of time before refreshing the value used to determine the amount of memory being used by the process that hosts the crawler instance.
+            This value has no effect if MaxMemoryUsageInMb is zero.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MaxCrawlDepth">
+            <summary>
+            Maximum levels below root page to crawl. If value is 0, the homepage will be crawled but none of its links will be crawled. If the level is 1, the homepage and its links will be crawled but none of the links links will be crawled.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MaxLinksPerPage">
+            <summary>
+            Maximum links to crawl per page.
+            If value is zero, this setting has no effect.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsForcedLinkParsingEnabled">
+            <summary>
+            Gets or sets a value that indicates whether the crawler should parse the page's links even if a CrawlDecision (like CrawlDecisionMaker.ShouldCrawlPageLinks()) determines that those links will not be crawled.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MaxRetryCount">
+            <summary>
+            The max number of retries for a url if a web exception is encountered. If the value is 0, no retries will be made
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MinRetryDelayInMilliseconds">
+            <summary>
+            The minimum delay between a failed http request and the next retry
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsRespectRobotsDotTextEnabled">
+            <summary>
+            Whether the crawler should retrieve and respect the robots.txt file.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsRespectMetaRobotsNoFollowEnabled">
+            <summary>
+            Whether the crawler should ignore links on pages that have a <meta name="robots" content="nofollow" /> tag
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsRespectHttpXRobotsTagHeaderNoFollowEnabled">
+            <summary>
+            Whether the crawler should ignore links on pages that have an http X-Robots-Tag header of nofollow
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Abot.Poco.CrawlConfiguration.IsRespectAnchorRelNoFollowEnabled" -->
+        <member name="P:Abot.Poco.CrawlConfiguration.IsIgnoreRobotsDotTextIfRootDisallowedEnabled">
+            <summary>
+            If true, will ignore the robots.txt file if it disallows crawling the root uri.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.RobotsDotTextUserAgentString">
+            <summary>
+            The user agent string to use when checking robots.txt file for specific directives.  Some examples of other crawler's user agent values are "googlebot", "slurp" etc...
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MinCrawlDelayPerDomainMilliSeconds">
+            <summary>
+            The number of milliseconds to wait in between http requests to the same domain.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.MaxRobotsDotTextCrawlDelayInSeconds">
+            <summary>
+            The maximum numer of seconds to respect in the robots.txt "Crawl-delay: X" directive. 
+            IsRespectRobotsDotTextEnabled must be true for this value to be used.
+            If zero, will use whatever the robots.txt crawl delay requests no matter how high the value is.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.IsAlwaysLogin">
+            <summary>
+            Defines whether each request should be authorized via login
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.LoginUser">
+            <summary>
+            The user name to be used for authorization
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.LoginPassword">
+            <summary>
+            The password to be used for authorization
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlConfiguration.UseDefaultCredentials">
+            <summary>
+            Specifies whether to use default credentials.
+            </summary>
+        </member>
+        <member name="F:Abot.Poco.CrawlContext.CrawledCount">
+            <summary>
+            total number of pages that have been crawled
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlContext.RootUri">
+            <summary>
+            The root of the crawl
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlContext.OriginalRootUri">
+            <summary>
+            The root of the crawl specified in the configuration. If the root URI was redirected to another URI,
+            it will be set in RootUri.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlContext.CrawlStartDate">
+            <summary>
+            The datetime of the last unsuccessful http status (non 200) was requested
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlContext.CrawlCountByDomain">
+            <summary>
+            Threadsafe dictionary of domains and how many pages were crawled in that domain
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlContext.CrawlConfiguration">
+            <summary>
+            Configuration values used to determine crawl settings
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlContext.Scheduler">
+            <summary>
+            The scheduler that is being used
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlContext.CrawlBag">
+            <summary>
+            Random dynamic values
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlContext.IsCrawlStopRequested">
+            <summary>
+            Whether a request to stop the crawl has happened. Will clear all scheduled pages but will allow any threads that are currently crawling to complete.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlContext.IsCrawlHardStopRequested">
+            <summary>
+            Whether a request to hard stop the crawl has happened. Will clear all scheduled pages and cancel any threads that are currently crawling.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlContext.MemoryUsageBeforeCrawlInMb">
+            <summary>
+            The memory usage in mb at the start of the crawl
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlContext.MemoryUsageAfterCrawlInMb">
+            <summary>
+            The memory usage in mb at the end of the crawl
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlContext.CancellationTokenSource">
+            <summary>
+            Cancellation token used to hard stop the crawl. Will clear all scheduled pages and abort any threads that are currently crawling.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlDecision.Allow">
+            <summary>
+            Whether to allow the crawl decision
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlDecision.Reason">
+            <summary>
+            The reason the crawl decision was NOT allowed
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlDecision.ShouldStopCrawl">
+            <summary>
+            Whether the crawl should be stopped. Will clear all scheduled pages but will allow any threads that are currently crawling to complete.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlDecision.ShouldHardStopCrawl">
+            <summary>
+            Whether the crawl should be "hard stopped". Will clear all scheduled pages and cancel any threads that are currently crawling.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageToCrawl.Uri">
+            <summary>
+            The uri of the page
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageToCrawl.ParentUri">
+            <summary>
+            The parent uri of the page
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageToCrawl.IsRetry">
+            <summary>
+            Whether http requests had to be retried more than once. This could be due to throttling or politeness.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageToCrawl.RetryAfter">
+            <summary>
+            The time in seconds that the server sent to wait before retrying.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageToCrawl.RetryCount">
+            <summary>
+            The number of times the http request was be retried.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageToCrawl.LastRequest">
+            <summary>
+            The datetime that the last http request was made. Will be null unless retries are enabled.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageToCrawl.IsRoot">
+            <summary>
+            Whether the page is the root uri of the crawl
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageToCrawl.IsInternal">
+            <summary>
+            Whether the page is internal to the root uri of the crawl
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageToCrawl.CrawlDepth">
+            <summary>
+            The depth from the root of the crawl. If this page is the homepage this value will be zero, if this page was found on the homepage this value will be 1 and so on.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageToCrawl.PageBag">
+            <summary>
+            Can store values of any type. Useful for adding custom values to the CrawledPage dynamically from event subscriber code
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageToCrawl.RedirectedFrom">
+            <summary>
+            The uri that this page was redirected from. If null then it was not part of the redirect chain
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageToCrawl.RedirectPosition">
+            <summary>
+            The position in the redirect chain. The first redirect is position 1, the next one is 2 and so on.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.HtmlDocument">
+            <summary>
+            Lazy loaded Html Agility Pack (http://htmlagilitypack.codeplex.com/) document that can be used to retrieve/modify html elements on the crawled page.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.AngleSharpHtmlDocument">
+            <summary>
+            Lazy loaded AngleSharp IHtmlDocument (https://github.com/AngleSharp/AngleSharp) that can be used to retrieve/modify html elements on the crawled page.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.HttpWebRequest">
+            <summary>
+            Web request sent to the server
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.HttpWebResponse">
+            <summary>
+            Web response from the server. NOTE: The Close() method has been called before setting this property.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.WebException">
+            <summary>
+            The web exception that occurred during the crawl
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.ParsedLinks">
+            <summary>
+            Links parsed from page. This value is set by the WebCrawler.SchedulePageLinks() method only If the "ShouldCrawlPageLinks" rules return true or if the IsForcedLinkParsingEnabled config value is set to true.
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.Content">
+            <summary>
+            The content of page request
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.RequestStarted">
+            <summary>
+            A datetime of when the http request started
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.RequestCompleted">
+            <summary>
+            A datetime of when the http request completed
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.DownloadContentStarted">
+            <summary>
+            A datetime of when the page content download started, this may be null if downloading the content was disallowed by the CrawlDecisionMaker or the inline delegate ShouldDownloadPageContent
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.DownloadContentCompleted">
+            <summary>
+            A datetime of when the page content download completed, this may be null if downloading the content was disallowed by the CrawlDecisionMaker or the inline delegate ShouldDownloadPageContent
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.RedirectedTo">
+            <summary>
+            The page that this pagee was redirected to
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawledPage.Elapsed">
+            <summary>
+            Time it took from RequestStarted to RequestCompleted in milliseconds
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlResult.RootUri">
+            <summary>
+            The root of the crawl
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlResult.Elapsed">
+            <summary>
+            The amount of time that elapsed before the crawl completed
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlResult.ErrorOccurred">
+            <summary>
+            Whether or not an error occurred during the crawl that caused it to end prematurely
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlResult.ErrorException">
+            <summary>
+            The exception that caused the crawl to end prematurely
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.CrawlResult.CrawlContext">
+            <summary>
+            The context of the crawl
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IPageRequester.MakeRequest(System.Uri)">
+            <summary>
+            Make an http web request to the url and download its content
+            </summary>
+        </member>
+        <member name="M:Abot.Core.IPageRequester.MakeRequest(System.Uri,System.Func{Abot.Poco.CrawledPage,Abot.Poco.CrawlDecision})">
+            <summary>
+            Make an http web request to the url and download its content based on the param func decision
+            </summary>
+        </member>
+        <member name="M:Abot.Core.PageRequester.MakeRequest(System.Uri)">
+            <summary>
+            Make an http web request to the url and download its content
+            </summary>
+        </member>
+        <member name="M:Abot.Core.PageRequester.MakeRequest(System.Uri,System.Func{Abot.Poco.CrawledPage,Abot.Poco.CrawlDecision})">
+            <summary>
+            Make an http web request to the url and download its content based on the param func decision
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageContent.Bytes">
+            <summary>
+            The raw data bytes taken from the web response
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageContent.Charset">
+            <summary>
+            String representation of the charset/encoding
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageContent.Encoding">
+            <summary>
+            The encoding of the web response
+            </summary>
+        </member>
+        <member name="P:Abot.Poco.PageContent.Text">
+            <summary>
+            The raw text taken from the web response
+            </summary>
+        </member>
+    </members>
+</doc>

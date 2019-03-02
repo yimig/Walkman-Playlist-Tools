@@ -1,0 +1,2 @@
+C:\Users\zhang\source\repos\Walkman Playlist Tools\爬虫测试\obj\x86\Debug\爬虫测试.csprojAssemblyReference.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\爬虫测试\obj\x86\Debug\爬虫测试.csproj.CoreCompileInputs.cache

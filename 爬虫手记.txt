@@ -1,0 +1,2 @@
+musicID是八位数字
+歌词：直接获取"http://music.163.com/api/song/lyric?id="+musicID+"&lv=1&kv=1&tv=-1"

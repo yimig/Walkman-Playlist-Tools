@@ -1,0 +1,11 @@
+﻿1.由ListView中的data定位到ListViewItem：
+            foreach(DataType data in (listview).items)
+			{
+			     if(something)
+				 {
+                      (listview).ScrollIntoView(data);
+                      ListViewItem item = lv.ItemContainerGenerator.ContainerFromItem(data) as ListViewItem;
+                      item.Focus();
+					  break;
+			      }
+			}
