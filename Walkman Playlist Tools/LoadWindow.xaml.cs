@@ -214,6 +214,8 @@ namespace Walkman_Playlist_Tools
             for (int i = 0; i < pathList.Count; i++)
             {
                 backgroundWorker.ReportProgress((int)(i / weight), pathList[i].FullName);
+                //在这里判断文件重复
+
                 MusicInfo musicInfo = new MusicInfo(pathList[i].FullName);
                 if(!isCopy)scanResult.Add(musicInfo);
                 else

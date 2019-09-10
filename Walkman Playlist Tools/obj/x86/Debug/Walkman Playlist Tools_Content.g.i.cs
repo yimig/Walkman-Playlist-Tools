@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("addplaylist.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("%e8%8d%89%e7%a8%bf.txt")]
 
 

@@ -115,26 +115,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Walkman Playlist Tools.exe" size="141312">
-      <assemblyIdentity name="Walkman Playlist Tools" version="0.9.0.0" language="neutral" processorArchitecture="x86" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wOHfMqV8LL6iFZ3zG1plxygpN6DItAmZbwac0TPa9A0=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Walkman Playlist Tools.exe" size="1043912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Walkman Playlist Tools.exe" size="1044936">
       <assemblyIdentity name="Walkman Playlist Tools" version="1.0.1.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>U2RwwgNto+mBOmlrKV/s78gt6RzVUmQqRhtTD7F+VYc=</dsig:DigestValue>
+        <dsig:DigestValue>3w8rvqe7FYBQ7PI+Q7tJk7GypVaRgxdCRgpUkuKalsc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -147,13 +135,13 @@
       <dsig:DigestValue>Flx3uNVNX0H5xfOMv4E2axyDVpY+pyysLgiesZTFFTk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Walkman Playlist Tools.exe.config" size="3744">
+  <file name="Walkman Playlist Tools.exe.config" size="3739">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>bD4yqD2XWvo+SGs2mLE279PoTCyxRV4Xiz/xO1h+ehY=</dsig:DigestValue>
+      <dsig:DigestValue>L2Dq/7z8706lSm0O/NMcDjFiluEj5Vzqyo5//etQilI=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

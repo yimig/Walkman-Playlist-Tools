@@ -1,7 +1,0 @@
-C:\Users\zhang\source\repos\Walkman Playlist Tools\event\bin\Debug\@event.exe.config
-C:\Users\zhang\source\repos\Walkman Playlist Tools\event\bin\Debug\@event.exe
-C:\Users\zhang\source\repos\Walkman Playlist Tools\event\bin\Debug\@event.pdb
-C:\Users\zhang\source\repos\Walkman Playlist Tools\event\obj\Debug\event.csprojAssemblyReference.cache
-C:\Users\zhang\source\repos\Walkman Playlist Tools\event\obj\Debug\event.csproj.CoreCompileInputs.cache
-C:\Users\zhang\source\repos\Walkman Playlist Tools\event\obj\Debug\@event.exe
-C:\Users\zhang\source\repos\Walkman Playlist Tools\event\obj\Debug\@event.pdb

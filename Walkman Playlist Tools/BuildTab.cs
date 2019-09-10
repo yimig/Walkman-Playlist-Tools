@@ -164,6 +164,8 @@ namespace Walkman_Playlist_Tools
             gv.Columns.Add(pathColumn);
             NewListView.View = gv;
             NewListView.ItemsSource = infos;
+            var a = pathColumn.Header as GridViewColumnHeader;
+            //MessageBox.Show(a.ToString());
         }
     }
 }

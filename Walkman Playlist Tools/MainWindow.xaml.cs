@@ -1786,9 +1786,10 @@ namespace Walkman_Playlist_Tools
 
         private void SaveButton_OnClick(object sender, RoutedEventArgs e)
         {
+            GetArea area = new GetArea(this);
             try
             {
-                SavePlaylist(true, Setting.Default.WalkmanTag + "\\Music\\", new GetArea(this).Playlist.GetPlaylistList().SelectedItem as BuildPlaylist, false);
+                SavePlaylist(true, area.GetSavePath(), area.Playlist.GetPlaylistList().SelectedItem as BuildPlaylist, false);
                 ChangeStatueInfo("已保存");
             }
             catch (UnauthorizedAccessException)

@@ -4,17 +4,17 @@
   <description asmv2:publisher="HP Inc." asmv2:product="Walkman Playlist Tools" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.6.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Walkman Playlist Tools.exe.manifest" size="8665">
+    <dependentAssembly dependencyType="install" codebase="Walkman Playlist Tools.exe.manifest" size="8003">
       <assemblyIdentity name="Walkman Playlist Tools.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/Iarebcm3+8za6pHmc/q/5LBWgZd0rbJ5PBB3IJTH8o=</dsig:DigestValue>
+        <dsig:DigestValue>I25sXKQL/5AVQeLvZ3dMsKxaHG9Dx5womO6BllBJfbA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
