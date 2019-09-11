@@ -1,0 +1,11 @@
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ChineseSortTest\bin\Debug\netcoreapp2.1\ChineseSortTest.deps.json
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ChineseSortTest\bin\Debug\netcoreapp2.1\ChineseSortTest.runtimeconfig.json
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ChineseSortTest\bin\Debug\netcoreapp2.1\ChineseSortTest.runtimeconfig.dev.json
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ChineseSortTest\bin\Debug\netcoreapp2.1\ChineseSortTest.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ChineseSortTest\bin\Debug\netcoreapp2.1\ChineseSortTest.pdb
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ChineseSortTest\obj\Debug\netcoreapp2.1\ChineseSortTest.csprojAssemblyReference.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ChineseSortTest\obj\Debug\netcoreapp2.1\ChineseSortTest.csproj.CoreCompileInputs.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ChineseSortTest\obj\Debug\netcoreapp2.1\ChineseSortTest.AssemblyInfoInputs.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ChineseSortTest\obj\Debug\netcoreapp2.1\ChineseSortTest.AssemblyInfo.cs
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ChineseSortTest\obj\Debug\netcoreapp2.1\ChineseSortTest.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\ChineseSortTest\obj\Debug\netcoreapp2.1\ChineseSortTest.pdb

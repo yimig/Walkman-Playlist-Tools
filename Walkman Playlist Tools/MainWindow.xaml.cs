@@ -1443,6 +1443,12 @@ namespace Walkman_Playlist_Tools
             }
         }
 
+        private void TestFunc()
+        {
+            var tree = Walkman_PlaylistList.View;
+            
+        }
+
 
 
 
@@ -2012,5 +2018,10 @@ namespace Walkman_Playlist_Tools
 
 
         #endregion
+
+        private void TestButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            TestFunc();
+        }
     }
 }

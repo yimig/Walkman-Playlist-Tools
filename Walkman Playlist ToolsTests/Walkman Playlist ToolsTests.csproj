@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="LoadWindowTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortMusicInfoTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -11,6 +11,7 @@ using System.Windows.Data;
 using System.Xml.Linq;
 using System.Xml;
 using System.Windows.Markup;
+using System.Windows.Media;
 
 namespace Walkman_Playlist_Tools
 {
@@ -123,9 +124,10 @@ namespace Walkman_Playlist_Tools
 
             gv.Columns.Add(checkColumn);
             var titleColumn = new GridViewColumn();
-            titleColumn.Header = "标题";
+            titleColumn.Header = GetLabel("标题", 200);
             titleColumn.Width = 200;
             titleColumn.DisplayMemberBinding = new Binding("Title");
+            //GridViewColumnHeader header=new GridViewColumnHeader();
             gv.Columns.Add(titleColumn);
             var formatColumn = new GridViewColumn();
             formatColumn.Header = "格式";
@@ -166,6 +168,36 @@ namespace Walkman_Playlist_Tools
             NewListView.ItemsSource = infos;
             var a = pathColumn.Header as GridViewColumnHeader;
             //MessageBox.Show(a.ToString());
+        }
+
+        private Label GetLabel(string name,int width)
+        {
+            Label label=new Label();
+            label.Content = name;
+            label.Width = width;
+            label.HorizontalContentAlignment = HorizontalAlignment.Center;
+            label.MouseLeftButtonDown += Label_MouseLeftButtonDown;
+            return label;
+        }
+
+        private ListView GetListView(object label)
+        {
+            var rawlabel = label as Label;
+            var header = rawlabel.Parent as GridViewColumnHeader;
+            var rowPresenter = header.Parent as GridViewHeaderRowPresenter;
+            var scrollViewer1 = rowPresenter.Parent as ScrollViewer;
+            var dockPanel = scrollViewer1.Parent as DockPanel;
+            var grid = dockPanel.Parent as Grid;
+            var scrollViewer2 = VisualTreeHelper.GetParent(grid) as ScrollViewer;
+            var listBoxChrome = scrollViewer2.Parent as DependencyObject;
+            return VisualTreeHelper.GetParent(listBoxChrome) as ListView;
+        }
+
+        private void Label_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            ListView targetLV = GetListView(sender);
+            ObservableCollection<MusicInfo> infobase = targetLV.ItemsSource as ObservableCollection<MusicInfo>;
+            targetLV.ItemsSource=SortMusicInfo.ByChineseFormat(infobase, i => i.Title);
         }
     }
 }
