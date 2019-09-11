@@ -38,7 +38,13 @@ namespace Walkman_Playlist_Tools
         public bool CheckForUpDate()
         {
             var webClient=new WebClient();
-            var info=webClient.DownloadString("http://upane.cn/version.txt");
+            /*未联网时检查更新会崩溃
+            
+             * 引发的异常:“System.Net.WebException”(位于 System.dll 中)
+             *“System.Net.WebException”类型的未经处理的异常在 System.dll 中发生 
+             *Unable to connect to the remote server
+             */
+            var info =webClient.DownloadString("http://upane.cn/version.txt");
             newVersion = info.Split(new char[]{'\n'})[0];
             description = info.Split(new char[] {'{', '}'})[1];
             var oldver = Formation(System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString());

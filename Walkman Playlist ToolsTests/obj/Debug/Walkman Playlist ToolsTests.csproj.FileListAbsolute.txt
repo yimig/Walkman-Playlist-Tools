@@ -1,0 +1,30 @@
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\obj\Debug\Walkman Playlist ToolsTests.csprojAssemblyReference.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\obj\Debug\Walkman Playlist ToolsTests.csproj.CoreCompileInputs.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Walkman Playlist ToolsTests.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Walkman Playlist ToolsTests.pdb
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Walkman Playlist Tools.exe
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\HtmlAgilityPack.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Bass.Net.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\LanguageDetect.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\vjslib.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Walkman Playlist Tools.pdb
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Walkman Playlist Tools.exe.config
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\HtmlAgilityPack.xml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Bass.Net.xml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\obj\Debug\Walkman Playlist ToolsTests.csproj.CopyComplete
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\obj\Debug\Walkman Playlist ToolsTests.dll
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\obj\Debug\Walkman Playlist ToolsTests.pdb

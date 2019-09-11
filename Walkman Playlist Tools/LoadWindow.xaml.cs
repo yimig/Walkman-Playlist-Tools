@@ -46,13 +46,18 @@ namespace Walkman_Playlist_Tools
         /// 窗口：仅扫描
         /// </summary>
         /// <param name="pathList">包含被扫描的文件列表（此时这些文件应已在设备内）</param>
-        public LoadWindow(List<FileSystemInfo> pathList)
+        /// <param name="infobase">要修改的音乐列表清单</param>
+        public LoadWindow(List<FileSystemInfo> pathList, ObservableCollection<MusicInfo> infobase)
         {
             InitializeComponent();
             isCopy = false;
-            scanResult = new List<MusicInfo>();
             InitBGWorker();
-            backgroundWorker.RunWorkerAsync(pathList);
+            List<string> listPath = infobase.Select(i => i.Path).ToList();
+            List<string> existPath = pathList.Select(i => i.FullName).ToList();
+            List<string> infoAddList = existPath.Except(listPath).ToList();
+            List<string> infoDelList = listPath.Except(existPath).ToList();
+            scanResult = Distinct(infobase.ToList(), infoDelList);
+            backgroundWorker.RunWorkerAsync(infoAddList);
         }
 
         /// <summary>
@@ -67,7 +72,7 @@ namespace Walkman_Playlist_Tools
             isCopy = true;
             scanResult = new List<MusicInfo>();
             InitBGWorker();
-            backgroundWorker.RunWorkerAsync(pathList);
+            backgroundWorker.RunWorkerAsync(pathList.Select(i=>i.FullName));
         }
 
         /// <summary>
@@ -85,7 +90,7 @@ namespace Walkman_Playlist_Tools
             this.ChoiseAddr = ChoiseAddr;
             scanResult = new List<MusicInfo>();
             InitBGWorker();
-            backgroundWorker.RunWorkerAsync(pathList);
+            backgroundWorker.RunWorkerAsync(pathList.Select(i=>i.FullName));
         }
 
         /// <summary>
@@ -209,17 +214,17 @@ namespace Walkman_Playlist_Tools
         private void AnalyseMusic_DoWork(object sender, DoWorkEventArgs e)
         {
             var backgroundWorker = sender as BackgroundWorker;
-            var pathList = e.Argument as List<FileSystemInfo>;
+            var pathList = e.Argument as List<string>;
             double weight = (pathList.Count / 100.0);
             for (int i = 0; i < pathList.Count; i++)
             {
-                backgroundWorker.ReportProgress((int)(i / weight), pathList[i].FullName);
+                backgroundWorker.ReportProgress((int)(i / weight), pathList[i]);
                 //在这里判断文件重复
-
-                MusicInfo musicInfo = new MusicInfo(pathList[i].FullName);
-                if(!isCopy)scanResult.Add(musicInfo);
+                MusicInfo musicInfo=new MusicInfo(pathList[i]);
+                if (!isCopy)scanResult.Add(new MusicInfo(pathList[i]));
                 else
                 {
+                    musicInfo = new MusicInfo(pathList[i]);
                     try
                     {
                         musicInfo.Path = CopyFileFunc(musicInfo);
@@ -235,6 +240,41 @@ namespace Walkman_Playlist_Tools
                     }
                 }
             }
+        }
+
+        /*
+        ///更新scanResult列表
+        private void UpdateInfo(string musicPath)
+        {
+            bool isFoundMusic = false;
+            //没有删除音乐的情况，需添加
+            for (int i=0; i < scanResult.Count; i++)
+            {
+                if (scanResult[i].Path == musicPath)
+                {
+                    isFoundMusic = true;
+                    break;
+                }
+            }
+            if(!isFoundMusic)scanResult.Add(new MusicInfo(musicPath));
+        }
+        */
+
+        private List<MusicInfo> Distinct(List<MusicInfo> orginInfos, List<string> delPaths)
+        {
+            int checkNum=0;
+            for (; delPaths.Count > 0&&orginInfos.Count>0;)
+            {
+                for (int i = 0; i < orginInfos.Count; i++)
+                {
+                    if (delPaths[0] == orginInfos[i].Path) checkNum = i;
+                }
+
+                delPaths.RemoveAt(0);
+                orginInfos.RemoveAt(checkNum);
+            }
+
+            return orginInfos;
         }
 
         private void Window_Closing(object sender, CancelEventArgs e)

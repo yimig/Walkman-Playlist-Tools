@@ -173,21 +173,10 @@ namespace Walkman_Playlist_Tools
                     return dic;
                 }
 
-                public TabControl GetMainTBC()
-                {
-                    return mainWindow.WorkPlace;
-                }
-
                 public TabControl GetSelectedSubTBC()
                 {
                     if (isWalkman) return mainWindow.Walkman_WorkPlace;
                     else return mainWindow.SDcard_WorkPlace;
-                }
-
-                public TabItem[] GetSubTBIs()
-                {
-                    if (isWalkman) return GetSubTBIs(mainWindow.Walkman_WorkPlace);
-                    else return GetSubTBIs(mainWindow.SDcard_WorkPlace);
                 }
 
                 public TabItem GetSelectedSubTBI()
@@ -261,11 +250,6 @@ namespace Walkman_Playlist_Tools
                     return dic;
                 }
 
-                public TabControl GetMainTBC()
-                {
-                    return mainWindow.Playlist;
-                }
-
                 public BuildPlaylist GetSelectedBuildPlaylist()
                 {
                     if (isWalkman) return mainWindow.Walkman_PlaylistList.SelectedItem as BuildPlaylist;
@@ -276,12 +260,6 @@ namespace Walkman_Playlist_Tools
                 {
                     if (isWalkman) return mainWindow.Walkman_PlaylistList;
                     else return mainWindow.SDCard_PlaylistList;
-                }
-
-                public ListView[] GetAllPlaylists()
-                {
-                    if (isWalkman) return GetPlaylistListResult(mainWindow.Walkman_PlaylistList);
-                    else return GetPlaylistListResult(mainWindow.SDCard_PlaylistList);
                 }
 
                 public ListView GetSelectedPlaylist()
@@ -1149,13 +1127,6 @@ namespace Walkman_Playlist_Tools
         void ScanMusic(List<FileSystemInfo> pathList,bool isRefurbish,bool isCopy,bool isCopyFolder,string choiceAddr)
         {
             LoadWindow loadWindow;
-            if (isCopy)
-            {
-                if (isCopyFolder) loadWindow = new LoadWindow(pathList, GetCopyRoot(Setting.Default.CopyFolderDrive), choiceAddr);
-                else loadWindow = new LoadWindow(pathList, GetCopyRoot(Setting.Default.CopyFileDrive));
-            }
-            else loadWindow=new LoadWindow(pathList);
-            loadWindow.ShowDialog();
             ObservableCollection<MusicInfo> infobase;
             ListView selectedListView=null;
             GetArea area=null;
@@ -1186,6 +1157,13 @@ namespace Walkman_Playlist_Tools
                 selectedListView = area.WorkPlace.GetAllWorkPlace()[0];
             }
             infobase = selectedListView.ItemsSource as ObservableCollection<MusicInfo>;
+            if (isCopy)
+            {
+                if (isCopyFolder) loadWindow = new LoadWindow(pathList, GetCopyRoot(Setting.Default.CopyFolderDrive), choiceAddr);
+                else loadWindow = new LoadWindow(pathList, GetCopyRoot(Setting.Default.CopyFileDrive));
+            }
+            else loadWindow = new LoadWindow(pathList,infobase);
+            loadWindow.ShowDialog();
             if (!loadWindow.IsCancel)
             {
                 if(isRefurbish)infobase?.Clear();
