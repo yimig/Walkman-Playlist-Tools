@@ -203,7 +203,9 @@
                             <ListView Name="Walkman_PlaylistList">
                                 <ListView.View>
                                     <GridView>
-                                        <GridViewColumn Header="列表名称" DisplayMemberBinding="{Binding Path=Name}" Width="200"></GridViewColumn>
+                                        <GridViewColumn DisplayMemberBinding="{Binding Path=Name}" Width="200">
+                                            <Label Height="17" Padding="0">列表名称</Label>
+                                        </GridViewColumn>
                                         <GridViewColumn Header="歌曲数量" DisplayMemberBinding="{Binding Path=ListViewInside.Items.Count}" Width="60"></GridViewColumn>
                                     </GridView>
                                 </ListView.View>
@@ -232,7 +234,6 @@
                         </Grid>
                     </TabItem>
                 </TabControl>
-                <Button Name="TestButton" Grid.Column="4" Grid.Row="1" Margin="10" Click="TestButton_OnClick" ></Button>
                 <Button Name="MoveButtonR" Background="#FFEEF5FD" Grid.Column="4" Grid.Row="2" Margin="10" ToolTip="移动选中的项目到播放列表" BorderBrush="#FF1F7A88" Click="MoveButtonR_OnClick">
                     <Image Source="Icon/moveR.ico"></Image>
                 </Button>

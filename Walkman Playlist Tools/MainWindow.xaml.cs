@@ -1428,6 +1428,10 @@ namespace Walkman_Playlist_Tools
             return list;
         }
 
+        /// <summary>
+        /// 刷新播放列表
+        /// </summary>
+        /// <param name="lv"></param>
         private void ReflushPlaylistStatue(ListView lv)
         {
             if (lv.Items.Count != 0)
@@ -1442,14 +1446,6 @@ namespace Walkman_Playlist_Tools
                 //硬核刷新
             }
         }
-
-        private void TestFunc()
-        {
-            var tree = Walkman_PlaylistList.View;
-            
-        }
-
-
 
 
         #endregion
@@ -2019,9 +2015,5 @@ namespace Walkman_Playlist_Tools
 
         #endregion
 
-        private void TestButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            TestFunc();
-        }
     }
 }

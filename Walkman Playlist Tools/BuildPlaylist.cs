@@ -239,22 +239,30 @@ namespace Walkman_Playlist_Tools
             checkColumn.CellTemplate = dataTemplate;
             gv.Columns.Add(checkColumn);
             var titleColumn = new GridViewColumn();
-            titleColumn.Header = "标题";
+            titleColumn.Header = GetLabel("标题", titleColumn);
             titleColumn.Width = 200;
             titleColumn.DisplayMemberBinding = new Binding("Title");
             gv.Columns.Add(titleColumn);
             var pathColumn = new GridViewColumn();
-            pathColumn.Header = "文件路径";
+            pathColumn.Header = GetLabel("文件路径", pathColumn);
             pathColumn.Width = 400;
             pathColumn.DisplayMemberBinding = new Binding("Path");
             gv.Columns.Add(pathColumn);
             ListViewInside.View = gv;
-            //titleColumn.CellTemplate=new DataTemplate(new DragCheckBox().GetType());
         }
 
-        public BuildPlaylist Clone()
+        private Label GetLabel(string name, GridViewColumn column)
         {
-            return new BuildPlaylist(listViewInside,name,path,infos);
+            Label label = new Label();
+            label.Content = name;
+            Binding binding = new Binding("Width");
+            binding.Source = column;
+            label.SetBinding(Label.WidthProperty, binding);
+            label.HorizontalContentAlignment = HorizontalAlignment.Center;
+            label.Height = 17;
+            label.Padding=new Thickness(0);
+            label.MouseLeftButtonDown += SortMusicInfo.Label_MouseLeftButtonDown;
+            return label;
         }
     }
 }

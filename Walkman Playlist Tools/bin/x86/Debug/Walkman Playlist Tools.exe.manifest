@@ -115,14 +115,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Walkman Playlist Tools.exe" size="1048008">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Walkman Playlist Tools.exe" size="1050568">
       <assemblyIdentity name="Walkman Playlist Tools" version="1.0.1.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HIaAwgQ0Koxv0QKosO6vXe3iAmQc/dW1a1vSMfaZFD4=</dsig:DigestValue>
+        <dsig:DigestValue>cHtz4XgcRWY525g3mM60Krio/ndeKjmSwRkeeTFIGck=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

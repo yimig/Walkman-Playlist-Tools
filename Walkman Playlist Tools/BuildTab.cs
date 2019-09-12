@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Input;
 using System.Xml.Linq;
 using System.Xml;
 using System.Windows.Markup;
@@ -124,80 +125,61 @@ namespace Walkman_Playlist_Tools
 
             gv.Columns.Add(checkColumn);
             var titleColumn = new GridViewColumn();
-            titleColumn.Header = GetLabel("标题", 200);
+            titleColumn.Header = GetLabel("标题", titleColumn);
             titleColumn.Width = 200;
             titleColumn.DisplayMemberBinding = new Binding("Title");
-            //GridViewColumnHeader header=new GridViewColumnHeader();
             gv.Columns.Add(titleColumn);
             var formatColumn = new GridViewColumn();
-            formatColumn.Header = "格式";
+            formatColumn.Header = GetLabel("格式", formatColumn);
             formatColumn.Width = 70;
             formatColumn.DisplayMemberBinding = new Binding("Format");
             gv.Columns.Add(formatColumn);
             var artistColumn = new GridViewColumn();
-            artistColumn.Header = "艺术家";
+            artistColumn.Header = GetLabel("艺术家", artistColumn);
             artistColumn.Width = 70;
             artistColumn.DisplayMemberBinding = new Binding("Artist");
             gv.Columns.Add(artistColumn);
             var albumColumn = new GridViewColumn();
-            albumColumn.Header = "专辑名称";
+            albumColumn.Header = GetLabel("专辑名称",albumColumn);
             albumColumn.Width = 100;
             albumColumn.DisplayMemberBinding = new Binding("Album");
             gv.Columns.Add(albumColumn);
             var lengthColumn = new GridViewColumn();
-            lengthColumn.Header = "曲长";
+            lengthColumn.Header = GetLabel("曲长",lengthColumn);
             lengthColumn.Width = 70;
             lengthColumn.DisplayMemberBinding = new Binding("Length");
             gv.Columns.Add(lengthColumn);
             var ageColumn = new GridViewColumn();
-            ageColumn.Header = "年代";
+            ageColumn.Header = GetLabel("年代",ageColumn);
             ageColumn.Width = 70;
             ageColumn.DisplayMemberBinding = new Binding("Year");
             gv.Columns.Add(ageColumn);
             var buildtimeColumn = new GridViewColumn();
-            buildtimeColumn.Header = "同步时间";
+            buildtimeColumn.Header = GetLabel("同步时间",buildtimeColumn);
             buildtimeColumn.Width = 70;
             buildtimeColumn.DisplayMemberBinding = new Binding("Buildtime");
             gv.Columns.Add(buildtimeColumn);
             var pathColumn = new GridViewColumn();
-            pathColumn.Header = "文件路径";
+            pathColumn.Header = GetLabel("文件路径",pathColumn);
             pathColumn.Width = 400;
             pathColumn.DisplayMemberBinding = new Binding("Path");
             gv.Columns.Add(pathColumn);
             NewListView.View = gv;
             NewListView.ItemsSource = infos;
-            var a = pathColumn.Header as GridViewColumnHeader;
-            //MessageBox.Show(a.ToString());
         }
 
-        private Label GetLabel(string name,int width)
+        private Label GetLabel(string name, GridViewColumn column)
         {
-            Label label=new Label();
+            Label label = new Label();
             label.Content = name;
-            label.Width = width;
+            Binding binding = new Binding("Width");
+            binding.Source = column;
+            label.SetBinding(Label.WidthProperty, binding);
             label.HorizontalContentAlignment = HorizontalAlignment.Center;
-            label.MouseLeftButtonDown += Label_MouseLeftButtonDown;
+            label.Height = 17;
+            label.Padding = new Thickness(0);
+            label.MouseLeftButtonDown += SortMusicInfo.Label_MouseLeftButtonDown;
             return label;
-        }
-
-        private ListView GetListView(object label)
-        {
-            var rawlabel = label as Label;
-            var header = rawlabel.Parent as GridViewColumnHeader;
-            var rowPresenter = header.Parent as GridViewHeaderRowPresenter;
-            var scrollViewer1 = rowPresenter.Parent as ScrollViewer;
-            var dockPanel = scrollViewer1.Parent as DockPanel;
-            var grid = dockPanel.Parent as Grid;
-            var scrollViewer2 = VisualTreeHelper.GetParent(grid) as ScrollViewer;
-            var listBoxChrome = scrollViewer2.Parent as DependencyObject;
-            return VisualTreeHelper.GetParent(listBoxChrome) as ListView;
-        }
-
-        private void Label_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            ListView targetLV = GetListView(sender);
-            ObservableCollection<MusicInfo> infobase = targetLV.ItemsSource as ObservableCollection<MusicInfo>;
-            targetLV.ItemsSource=SortMusicInfo.ByChineseFormat(infobase, i => i.Title);
         }
     }
 }

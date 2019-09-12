@@ -212,6 +212,7 @@
       <DependentUpon>SettingWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SortMusicInfo.cs" />
+    <Compile Include="StaticData.cs" />
     <Compile Include="TimerBind.cs" />
     <Compile Include="Utils\DragAdorner.cs" />
     <Compile Include="Utils\ListViewDragDropManager.cs" />

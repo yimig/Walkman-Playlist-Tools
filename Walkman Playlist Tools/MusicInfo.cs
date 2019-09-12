@@ -241,7 +241,7 @@ namespace Walkman_Playlist_Tools
         /// <returns>建立时间</returns>
         private string Get_BuildTime(Folder dir, FolderItem item)
         {
-            return dir.GetDetailsOf(item, 4);
+            return ConvertTime(dir.GetDetailsOf(item, 4));
         }
 
         /// <summary>
@@ -639,6 +639,21 @@ namespace Walkman_Playlist_Tools
             return info;
         }
 
+        public static string ConvertTime(string time)
+        {
+            string[] dateSplit = time.Split(new char[] {'/', ' '});
+            string newtime;
+            if (dateSplit[dateSplit.Length - 1] == "PM")
+            {
+                string[] timeSplit = dateSplit[3].Split(new char[] {':'});
+                newtime = Convert.ToInt32(timeSplit[0]) + 12 + ":" + timeSplit[1];
+            }
+            else
+            {
+                newtime = dateSplit[3];
+            }
 
+            return dateSplit[2] + "/" + dateSplit[1] + "/" + dateSplit[0] + " " + newtime;
+        }
     }
 }
