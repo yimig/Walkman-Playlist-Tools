@@ -79,6 +79,11 @@ namespace Walkman_Playlist_Tools
             lyric = GetLyric(id);
         }
 
+        /// <summary>
+        /// 处理网易云歌单原地址，并返回歌曲ID
+        /// </summary>
+        /// <param name="preURL">原地址</param>
+        /// <returns>歌曲ID</returns>
         private static string GetPlaylistID(string preURL)
         {
             string[] SplitedURL = preURL.Split(new char[] {'/'});
@@ -109,7 +114,7 @@ namespace Walkman_Playlist_Tools
         }
 
         /// <summary>
-        /// 得到网易云
+        /// 得到歌曲封面
         /// </summary>
         /// <param name="id">音乐</param>
         /// <param name="title">得到的音乐标题（out）</param>
@@ -200,8 +205,12 @@ namespace Walkman_Playlist_Tools
             return theString;
         }
 
-
-
+        /// <summary>
+        /// 得到网易云歌单
+        /// </summary>
+        /// <param name="preurl">未处理的原地址</param>
+        /// <param name="title">歌单名</param>
+        /// <returns>歌单歌曲</returns>
         public static List<string> GetPlaylist(string preurl,out string title)
         {
             List<string> list=new List<string>();

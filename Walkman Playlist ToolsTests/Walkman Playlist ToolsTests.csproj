@@ -59,6 +59,7 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="GetQQMusicInfoTests.cs" />
     <Compile Include="LoadWindowTests.cs" />
     <Compile Include="MusicInfoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

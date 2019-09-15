@@ -99,8 +99,10 @@
                     </Grid.RowDefinitions>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock VerticalAlignment="Center">来源：</TextBlock>
-                        <ComboBox Margin="5" SelectedIndex="0" IsEnabled="False" Width="110" VerticalContentAlignment="Center">
+                        <ComboBox Margin="5" SelectedIndex="0" Width="110" VerticalContentAlignment="Center">
+                            <ComboBoxItem>智能选择</ComboBoxItem>
                             <ComboBoxItem>网易云音乐</ComboBoxItem>
+                            <ComboBoxItem>QQ音乐</ComboBoxItem>
                         </ComboBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Grid.Row="1"  Grid.ColumnSpan="2">

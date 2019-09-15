@@ -34,7 +34,7 @@ namespace Walkman_Playlist_Tools.Tests
             testCollection.Add(info2);
             testCollection.Add(info5);
             testCollection.Add(info3);
-            var resultCollection = SortMusicInfo.ByChineseFormat(testCollection, i => i.Title);
+            //var resultCollection = SortMusicInfo.ByChineseFormat(testCollection, i => i.Title);
         }
 
         [TestMethod()]
@@ -66,7 +66,7 @@ namespace Walkman_Playlist_Tools.Tests
             testCollection.Add(info3);*/
             testCollection.Add(info7);
             testCollection.Add(info8);
-            var resultCollection = SortMusicInfo.ByNumberFormat(testCollection, i => i.Title);
+            //var resultCollection = SortMusicInfo.ByNumberFormat(testCollection, i => i.Title);
         }
     }
 }

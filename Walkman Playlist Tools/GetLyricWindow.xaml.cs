@@ -138,22 +138,40 @@ namespace Walkman_Playlist_Tools
 
         private List<OnlineMusicInfo> GetSearchResult(string searchText)
         {
+            return GetQQMusicSearchData(searchText);
+
+        }
+
+        private List<OnlineMusicInfo> GetNetEaseSearchData(string searchText)
+        {
             ServicePointManager.DefaultConnectionLimit = 100;
-            WebClient webClient=new WebClient();
-            webClient.Encoding=Encoding.UTF8;
+            WebClient webClient = new WebClient();
+            webClient.Encoding = Encoding.UTF8;
             string json = webClient.DownloadString(
                 @"http://music.163.com/api/search/get/web?csrf_token=hlpretag=&hlposttag=&s=" + searchText +
                 "&type=1&offset=0&total=true&limit=30");
             webClient.Dispose();
-            JsonSerializerSettings settings=new JsonSerializerSettings();
+            JsonSerializerSettings settings = new JsonSerializerSettings();
             settings.NullValueHandling = NullValueHandling.Ignore;
-            NeteaseMusicSearchData resultData = JsonConvert.DeserializeObject<NeteaseMusicSearchData>(json, settings);
+           NeteaseMusicSearchData resultData= JsonConvert.DeserializeObject<NeteaseMusicSearchData>(json, settings);
             List<OnlineMusicInfo> neteaseResult = new List<OnlineMusicInfo>();
-            if(resultData.result.songs!=null)foreach (Song song in resultData.result.songs)
+            if (resultData.result.songs != null) foreach (Song song in resultData.result.songs)
             {
                 neteaseResult.Add(new OnlineMusicInfo(song));
             }
             return neteaseResult;
+        }
+
+        private List<OnlineMusicInfo> GetQQMusicSearchData(string searchText)
+        {
+            var filtratedDatas = GetQQMusicInfo.GetFiltratedSearchResult(searchText);
+            var resultData = new List<OnlineMusicInfo>();
+            foreach (var filtratedData in filtratedDatas)
+            {
+                resultData.Add(new OnlineMusicInfo(filtratedData));
+            }
+
+            return resultData;
         }
 
         private void PauseProcess()
@@ -209,7 +227,8 @@ namespace Walkman_Playlist_Tools
             try
             {
                 (SearchResultList.SelectedItem as OnlineMusicInfo).Lyric =
-                    Format.TransLyric(GetNetEaseInfo.GetLyric(id));
+                    GetQQMusicInfo.GetLyric(id);
+                //Format.TransLyric(GetNetEaseInfo.GetLyric(id)));
             }
             catch (IndexOutOfRangeException)
             {
@@ -259,7 +278,7 @@ namespace Walkman_Playlist_Tools
             do
             {
                 backgroundWorker.ReportProgress(processNum--);
-                Thread.Sleep(random.Next(30, 40));
+                Thread.Sleep(random.Next(30, 100));
                 if (backgroundWorker.CancellationPending)
                 {
                     cancelProcess = true;
@@ -360,6 +379,14 @@ namespace Walkman_Playlist_Tools
                 if (this.artist == null) this.artist = artist.name;
                 else this.artist += ";" + artist.name;
             }
+        }
+
+        public OnlineMusicInfo(FiltratedData QQMusicSong)
+        {
+            title = QQMusicSong.SongTitle;
+            album = QQMusicSong.Album;
+            id = QQMusicSong.SongMid;
+            artist = QQMusicSong.Aritist;
         }
 
         public string Title

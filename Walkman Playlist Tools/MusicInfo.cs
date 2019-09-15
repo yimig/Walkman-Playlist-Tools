@@ -653,7 +653,7 @@ namespace Walkman_Playlist_Tools
                 newtime = dateSplit[3];
             }
 
-            return dateSplit[2] + "/" + dateSplit[1] + "/" + dateSplit[0] + " " + newtime;
+            return dateSplit[2] + "/" + dateSplit[0] + "/" + dateSplit[1] + " " + newtime;
         }
     }
 }
