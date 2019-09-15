@@ -2,6 +2,8 @@
 ## 一个制作Walkman播放列表的小应用
 
  ---
+ 
+ ![主界面](http://upane.cn/wp-content/uploads/2019/02/Walkman_Playlist_Tools_2019-02-09_15-40-56.png)
 
 ### 待添加的功能：
 1. 智能播放列表（锁定文件夹、其他播放列表）
