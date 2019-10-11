@@ -115,14 +115,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Walkman Playlist Tools.exe" size="1069512">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Walkman Playlist Tools.exe" size="1069000">
       <assemblyIdentity name="Walkman Playlist Tools" version="1.0.1.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XDQhh4iPu9dXSk3rttrlzY2qg0oxr2idIikrQ/DXSY8=</dsig:DigestValue>
+        <dsig:DigestValue>Ay6p1rxDuCeBbQOSzs1rpSUIHdL0o3czSNOMPm2Dmk4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -135,13 +135,13 @@
       <dsig:DigestValue>Flx3uNVNX0H5xfOMv4E2axyDVpY+pyysLgiesZTFFTk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Walkman Playlist Tools.exe.config" size="3739">
+  <file name="Walkman Playlist Tools.exe.config" size="3865">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>L2Dq/7z8706lSm0O/NMcDjFiluEj5Vzqyo5//etQilI=</dsig:DigestValue>
+      <dsig:DigestValue>e0bfqW0B9Jige6pFOgkvq6by48K3xxwfw1nTega0TZE=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

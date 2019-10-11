@@ -31,7 +31,6 @@ C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\x8
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\x86\Debug\PlayWindow.baml
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\x86\Debug\DelWindow.g.cs
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\x86\Debug\DelWindow.baml
-C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\bin\x86\Debug\Bass.Net.dll
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\bin\x86\Debug\Bass.Net.xml
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\obj\x86\Debug\Walkman Playlist Tools.csproj.CopyComplete
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\bin\x86\Debug\Newtonsoft.Json.dll

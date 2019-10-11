@@ -27,7 +27,14 @@ namespace Walkman_Playlist_Tools
 
         private void CheckUpdateButton_OnClick(object sender, RoutedEventArgs e)
         {
-            new CheckUpdate().CheckUpdateWithWindow();
+            try
+            {
+                new CheckUpdate().CheckUpdateWithWindow();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("检查更新时出现错误：" + ex.Message);
+            }
         }
 
         private void TeachButton_OnClick(object sender, RoutedEventArgs e)

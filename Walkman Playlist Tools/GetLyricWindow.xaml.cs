@@ -58,6 +58,7 @@ namespace Walkman_Playlist_Tools
         public GetLyricWindow(ListView lv)
         {
             InitializeComponent();
+            SwitchPlatformCBX.SelectedIndex = Setting.Default.GetLryicPlatform;
             infos = lv.ItemsSource as ObservableCollection<MusicInfo>;
             LocalInfoList.ItemsSource = infos;
             SetBinding();
@@ -138,8 +139,15 @@ namespace Walkman_Playlist_Tools
 
         private List<OnlineMusicInfo> GetSearchResult(string searchText)
         {
-            return GetQQMusicSearchData(searchText);
+            List<OnlineMusicInfo> onlineResult;
+            if (Setting.Default.GetLryicPlatform == 1) onlineResult=GetNetEaseSearchData(searchText);
+            else if (Setting.Default.GetLryicPlatform == 2) onlineResult=GetQQMusicSearchData(searchText);
+            else
+            {
+                onlineResult=new List<OnlineMusicInfo>();
+            }
 
+            return onlineResult;
         }
 
         private List<OnlineMusicInfo> GetNetEaseSearchData(string searchText)
@@ -226,9 +234,9 @@ namespace Walkman_Playlist_Tools
         {
             try
             {
-                (SearchResultList.SelectedItem as OnlineMusicInfo).Lyric =
-                    GetQQMusicInfo.GetLyric(id);
-                //Format.TransLyric(GetNetEaseInfo.GetLyric(id)));
+                if(Setting.Default.GetLryicPlatform==1) Format.TransLyric(GetNetEaseInfo.GetLyric(id));
+                else if(Setting.Default.GetLryicPlatform==2)(SearchResultList.SelectedItem as OnlineMusicInfo).Lyric =GetQQMusicInfo.GetLyric(id);
+                //
             }
             catch (IndexOutOfRangeException)
             {
@@ -236,6 +244,14 @@ namespace Walkman_Playlist_Tools
                 PauseProcess();
             }
         }
+
+        //private string AutoGetLyric(string id)
+        //{
+        //    if (!isFindArtist)
+        //    {
+
+        //    }
+        //}
 
         private void ChangeColor(bool isPass)
         {
@@ -361,6 +377,12 @@ namespace Walkman_Playlist_Tools
         private void GetLyricWindow_OnClosed(object sender, EventArgs e)
         {
             PauseProcess();
+        }
+
+        private void Selector_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Setting.Default.GetLryicPlatform = SwitchPlatformCBX.SelectedIndex;
+            Setting.Default.Save();
         }
     }
 

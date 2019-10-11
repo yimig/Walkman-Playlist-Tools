@@ -274,5 +274,17 @@ namespace Walkman_Playlist_Tools {
                 this["isDragToChangeOrder"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int GetLryicPlatform {
+            get {
+                return ((int)(this["GetLryicPlatform"]));
+            }
+            set {
+                this["GetLryicPlatform"] = value;
+            }
+        }
     }
 }
