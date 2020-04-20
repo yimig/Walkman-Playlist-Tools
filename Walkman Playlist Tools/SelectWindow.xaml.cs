@@ -126,7 +126,7 @@ namespace Walkman_Playlist_Tools
         }
 
         /// <summary>
-        /// 按导入事件进行分类
+        /// 按导入时间进行分类
         /// </summary>
         public void ByImportTime()
         {
@@ -136,7 +136,7 @@ namespace Walkman_Playlist_Tools
                 string[] datetime = info.Buildtime.Split(new char[] {' '});
                 string[] date = datetime[0].Split(new char[] {'/'});
                 infoFlags[i] = new InfoFlag();
-                infoFlags[i].Flag = date[0].Substring(2) + "年" + date[1] + "月" + date[2] + "日";
+                infoFlags[i].Flag = date[1].Substring(2) + "年" + date[2] + "月" + date[0] + "日";
                 infoFlags[i].MusicInfo = info;
             }
             StartSort();

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<outer>
+  <inner>
+    <inner-line-test>
+      inner line content
+    </inner-line-test>
+    <inner-bool-test>
+      false
+    </inner-bool-test>
+  </inner>
+  <inner-array>
+    <x-array>
+      0
+    </x-array>
+    <x-array>
+      1
+    </x-array>
+    <x-array>
+      2
+    </x-array>
+  </inner-array>
+</outer>

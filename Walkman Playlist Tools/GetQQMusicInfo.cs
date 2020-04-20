@@ -86,14 +86,7 @@ namespace Walkman_Playlist_Tools
         /// <returns>请求数据</returns>
         private static HttpWebResponse SentLyricRequest(string mid)
         {
-            /*WebClient webClient = new WebClient();
-            webClient.Encoding = Encoding.UTF8;
-            string rawjson = webClient.DownloadString(
-                @"https://c.y.qq.com/v8/fcg-bin/fcg_play_single_song.fcg?songmid=" + mid + "&tpl=yqq_song_detail&format=jsonp&callback=getOneSongInfoCallback&g_tk=5381&jsonpCallback=getOneSongInfoCallback&loginUin=0&hostUin=0&format=jsonp&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0");
-            url = rawjson;*/
             HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(new Uri("https://c.y.qq.com/lyric/fcgi-bin/fcg_query_lyric_new.fcg?-=MusicJsonCallback_lrc&pcachetime=1568550703813&songmid="+mid+"&g_tk=5381&loginUin=0&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq.json&needNewCode=0"));
-            //webRequest.KeepAlive = false;
-            //webRequest.Host = "music.163.com";
             webRequest.UserAgent =
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36";
             webRequest.Accept = "application/json, text/javascript, */*; q=0.01";
@@ -103,6 +96,7 @@ namespace Walkman_Playlist_Tools
             webRequest.Method = "GET";
             return (HttpWebResponse)webRequest.GetResponse();
         }
+
 
         /// <summary>
         /// 解压网页回传的数据流
@@ -145,6 +139,11 @@ namespace Walkman_Playlist_Tools
             return resultData;
         }
 
+        /// <summary>
+        /// 提取搜索结果中有用的信息
+        /// </summary>
+        /// <param name="title">搜索标题</param>
+        /// <returns></returns>
         public static FiltratedData[] GetFiltratedSearchResult(string title)
         {
             QQMusicSearchData rawdata = GetSearchResult(title);
@@ -165,6 +164,11 @@ namespace Walkman_Playlist_Tools
             return datas;
         }
 
+        /// <summary>
+        /// 解码Base64字符串
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         private static string UnBase64String(string value)
         {
             if (value == null || value == "")
@@ -175,6 +179,11 @@ namespace Walkman_Playlist_Tools
             return Encoding.UTF8.GetString(bytes);
         }
 
+        /// <summary>
+        /// 根据歌曲mid得到歌词
+        /// </summary>
+        /// <param name="mid"></param>
+        /// <returns></returns>
         public static string GetLyric(string mid)
         {
             Stream rawStream = UnzipStream(SentLyricRequest(mid));

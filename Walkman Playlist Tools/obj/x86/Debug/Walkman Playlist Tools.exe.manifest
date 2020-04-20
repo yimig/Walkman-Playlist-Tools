@@ -103,26 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="vjslib.dll" size="3604480">
-      <assemblyIdentity name="vjslib" version="2.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="amd64" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>odjPF8dCphpMUgp0aL6U2+yBcTF6TLbhPZlqt4qgyKw=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Walkman Playlist Tools.exe" size="1069000">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Walkman Playlist Tools.exe" size="1070536">
       <assemblyIdentity name="Walkman Playlist Tools" version="1.0.1.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Ay6p1rxDuCeBbQOSzs1rpSUIHdL0o3czSNOMPm2Dmk4=</dsig:DigestValue>
+        <dsig:DigestValue>kxA5PlXt501HRFzsA4XWGg7pKzz4UEsEPr5jwPjD4rY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

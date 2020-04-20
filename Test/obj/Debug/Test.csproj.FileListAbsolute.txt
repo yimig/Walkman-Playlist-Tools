@@ -1,0 +1,7 @@
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Test\obj\Debug\Test.csprojAssemblyReference.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Test\bin\Debug\Test.exe.config
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Test\bin\Debug\Test.exe
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Test\bin\Debug\Test.pdb
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Test\obj\Debug\Test.exe
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Test\obj\Debug\Test.pdb

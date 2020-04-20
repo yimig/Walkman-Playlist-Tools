@@ -97,7 +97,7 @@
     <ApplicationIcon>addplaylist.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>22DBDFC8B86C0EC2797D1F6B41BB7C7AD1F89C3B</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>C9EC81C8370E3FBD501636CEF4F9A83BF52E4285</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>Walkman Playlist Tools_TemporaryKey.pfx</ManifestKeyFile>

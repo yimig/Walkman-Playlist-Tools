@@ -15,7 +15,6 @@ C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\b
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\HtmlAgilityPack.dll
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Bass.Net.dll
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\LanguageDetect.dll
-C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\vjslib.dll
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Walkman Playlist Tools.pdb
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Walkman Playlist Tools.exe.config
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
@@ -24,7 +23,8 @@ C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\b
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\HtmlAgilityPack.xml
-C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Bass.Net.xml
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\obj\Debug\Walkman Playlist ToolsTests.csproj.CopyComplete
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\obj\Debug\Walkman Playlist ToolsTests.dll
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\obj\Debug\Walkman Playlist ToolsTests.pdb
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Walkman Playlist ToolsTests.dll.CodeAnalysisLog.xml
+C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist ToolsTests\bin\Debug\Walkman Playlist ToolsTests.dll.lastcodeanalysissucceeded

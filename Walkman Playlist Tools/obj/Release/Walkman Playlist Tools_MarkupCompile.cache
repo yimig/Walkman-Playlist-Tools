@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\zhang\source\repos\Walkman Playlist Tools\Walkman Playlist Tools\App.xaml
-10833041266
+151737373217
 
-2493527089
-18-954723119
-AboutWindow.xaml;DelWindow.xaml;LoadWindow.xaml;MainWindow.xaml;ManagePlaylistWindow.xaml;PlayWindow.xaml;RenameWindow.xaml;SearchWindow.xaml;SelectWindow.xaml;SettingWindow.xaml;
+43732698017
+20716674000
+AboutWindow.xaml;CustomPlaylistWindow.xaml;DelWindow.xaml;GetLyricWindow.xaml;GetOnlinePlaylistWindow.xaml;LoadWindow.xaml;MainWindow.xaml;ManagePlaylistWindow.xaml;NotFoundWindow.xaml;PlayWindow.xaml;RenameWindow.xaml;SearchWindow.xaml;SelectWindow.xaml;SettingWindow.xaml;Themes\Generic.xaml;
 
 True
 
